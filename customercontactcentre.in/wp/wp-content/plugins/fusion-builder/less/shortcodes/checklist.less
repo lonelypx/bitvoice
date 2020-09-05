@@ -1,0 +1,51 @@
+.fusion-checklist,
+ul.fusion-checklist {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0;
+
+  &.fusion-404-checklist > li,
+  .fusion-li-item {
+    padding: 5.5px 0;
+    margin-left: 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    p:first-of-type {
+      margin-top: 0;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &.fusion-checklist-divider {
+    &.fusion-404-checklist > li,
+    .fusion-li-item {
+      padding: 0.7em 0;
+      border-bottom: 1px solid;
+    }
+  }
+
+  .icon-wrapper {
+    display: table;
+    float: left;
+  }
+
+  .fusion-li-icon {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .circle-yes {
+    border-radius: 50%;
+    background-clip: padding-box;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+  }
+}

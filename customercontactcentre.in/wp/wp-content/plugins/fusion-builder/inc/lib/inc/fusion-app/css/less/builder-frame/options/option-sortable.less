@@ -1,0 +1,38 @@
+.fusion-builder-option {
+  .fusion-sortable-options {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .fusion-sortable-option {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #2a3035;
+      text-align: center;
+      border: 1px solid #e0e3e7;
+      border-radius: 4px;
+      background: #ffffff;
+      box-shadow: 0 0 0 1px 2px 0 rgba(22, 29, 37, 0.1);
+      transition: box-shadow 100ms;
+      cursor: move;
+      &.ui-sortable-placeholder {
+        background: #f3f3f3;
+        border: 1px dashed rgba(0, 0, 0, 0.1);
+        visibility: visible !important;
+        box-shadow: none;
+        animation: zoomIn 0.3s 1 cubic-bezier(0.77, 0, 0.175, 1);
+        display: block;
+      }
+
+      &:hover {
+        box-shadow: 0 1px 3px 0 rgba(22, 29, 37, 0.14);
+      }
+    }
+
+    .fusion-sortable-option:first-child {
+      margin-top: 0;
+    }
+  }
+}

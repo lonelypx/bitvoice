@@ -1,0 +1,926 @@
+.fusion-button.button-flat {
+  box-shadow: none !important;
+}
+
+.button-dimensions(@dim-height, @dim-padding-horizontal, @dim-padding-vertical, @dim-line-height, @dim-font, @dim-3d-top) {
+  padding: @dim-padding-vertical @dim-padding-horizontal;
+  line-height: @dim-line-height;
+  font-size: @dim-font;
+
+  &.button-3d:active {
+    top: @dim-3d-top;
+  }
+
+  .fusion-button-text-left {
+    display: inline-block;
+    padding-left: @dim-padding-horizontal + 5;
+  }
+
+  .fusion-button-text-right {
+    display: inline-block;
+    padding-right: @dim-padding-horizontal + 5;
+  }
+
+  .button-icon-divider-left {
+    padding: 0 (@dim-height - @dim-font) / 2;
+
+    &.fusion-megamenu-image {
+      padding: 0 (@dim-height - @dim-font) / 4;
+    }
+  }
+
+  .button-icon-divider-right {
+    padding: 0 (@dim-height - @dim-font) / 2;
+
+    &.fusion-megamenu-image {
+      padding: 0 (@dim-height - @dim-font) / 4;
+    }
+  }
+
+  .button-icon-divider-left i,
+  .button-icon-divider-left img,
+  .button-icon-divider-right i,
+  .button-icon-divider-right img {
+    top: 50%;
+    margin-top: -(@dim-font / 2);
+    display: block;
+  }
+}
+
+.button-colors(@grad-bottom-color, @grad-top-color, @border-color, @text-color) {
+  background: @grad-top-color;
+  background-image: linear-gradient(to top, @grad-bottom-color, @grad-top-color);
+  border: 1px solid @border-color;
+  color: @text-color;
+
+  .button-icon-divider-left,
+  .button-icon-divider-right {
+    border-color: @border-color;
+  }
+}
+
+.button-3d-effect(@3d-highlight-color, @3d-color) {
+
+  &.button-small,
+  &.fusion-button-small {
+    .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 2px 0px @3d-color, 1px 4px 4px 2px rgba(0, 0, 0, 0.3));
+
+    &:active {
+      .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 1px 0px @3d-color, 1px 4px 4px 2px rgba(0, 0, 0, 0.3));
+    }
+  }
+
+  .fusion-button_size-small & {
+    &.fusion-button-default-size {
+      .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 2px 0px @3d-color, 1px 4px 4px 2px rgba(0, 0, 0, 0.3));
+
+      &:active {
+        .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 1px 0px @3d-color, 1px 4px 4px 2px rgba(0, 0, 0, 0.3));
+      }
+    }
+  }
+
+  &.button-medium,
+  &.fusion-button-medium {
+    .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 3px 0px @3d-color, 1px 5px 5px 3px rgba(0, 0, 0, 0.3));
+
+    &:active {
+      .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 1px 0px @3d-color, 1px 5px 5px 3px rgba(0, 0, 0, 0.3));
+    }
+  }
+
+  .fusion-button_size-medium & {
+    &.fusion-button-default-size {
+      .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 3px 0px @3d-color, 1px 5px 5px 3px rgba(0, 0, 0, 0.3));
+
+      &:active {
+        .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 1px 0px @3d-color, 1px 5px 5px 3px rgba(0, 0, 0, 0.3));
+      }
+    }
+  }
+
+  &.button-large,
+  &.fusion-button-large {
+    .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 4px 0px @3d-color, 1px 6px 6px 3px rgba(0, 0, 0, 0.3));
+
+    &:active {
+      .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 1px 0px @3d-color, 1px 6px 6px 3px rgba(0, 0, 0, 0.3));
+    }
+  }
+
+  .fusion-button_size-large & {
+    &.fusion-button-default-size {
+      .button-box-shadow( inset 0px 1px 0px @3d-highlight-color, 0px 4px 0px @3d-color, 1px 6px 6px 3px rgba(0,0,0,0.3) );
+
+      &:active {
+        .button-box-shadow( inset 0px 1px 0px @3d-highlight-color, 0px 1px 0px @3d-color, 1px 6px 6px 3px rgba(0,0,0,0.3) );
+      }
+    }
+  }
+
+  &.button-xlarge,
+  &.fusion-button-xlarge {
+    .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 5px 0px @3d-color, 1px 7px 7px 3px rgba(0, 0, 0, 0.3));
+
+    &:active {
+      .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 2px 0px @3d-color, 1px 7px 7px 3px rgba(0, 0, 0, 0.3));
+    }
+  }
+
+  .fusion-button_size-xlarge & {
+    &.fusion-button-default-size {
+      .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 5px 0px @3d-color, 1px 7px 7px 3px rgba(0, 0, 0, 0.3));
+
+      &:active {
+        .button-box-shadow(inset 0px 1px 0px @3d-highlight-color, 0px 2px 0px @3d-color, 1px 7px 7px 3px rgba(0, 0, 0, 0.3));
+      }
+    }
+  }
+}
+
+.button-box-shadow(@shadow-arg-1, @shadow-arg-2, @shadow-arg-3) {
+  box-shadow: @shadow-arg-1, @shadow-arg-2, @shadow-arg-3;
+}
+
+.fusion-button-wrapper {
+  display: inline;
+
+  &.fusion-aligncenter {
+    display: block;
+    text-align: center;
+  }
+
+  &.fusion-align-block {
+      display: block;
+  }
+}
+
+.bbp-submit-wrapper .button,
+.fusion-button,
+.gform_wrapper .button,
+.gform_wrapper .gform_button,
+.post-password-form input[type="submit"],
+.tml-submit-wrap input[type="submit"],
+.tribe-events-tickets .button,
+.woocommerce .cart-collaterals .checkout-button,
+.woocommerce .checkout #place_order,
+.woocommerce.add_to_cart_inline .button,
+.wpcf7-submit {
+  display: inline-block;
+  position: relative;
+  .clearfix();
+  border: 1px solid rgba(0, 0, 0, 0);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+.fusion-disable-outline {
+
+  .bbp-submit-wrapper .button,
+  .fusion-button,
+  .gform_wrapper .button,
+  .gform_wrapper .gform_button,
+  .post-password-form input[type="submit"],
+  .tribe-events-tickets .button,
+  .woocommerce .cart-collaterals .checkout-button,
+  .woocommerce .checkout #place_order,
+  .wpcf7-submit,
+  .tml-submit-wrap input[type="submit"],
+  .woocommerce.add_to_cart_inline .button {
+    outline: 0;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.fusion-button i,
+.fusion-button-icon-divider,
+.fusion-button-text {
+  transition: all 0.2s;
+}
+
+.ls-container {
+
+  .button,
+  .fusion-button {
+    transition: none !important;
+
+    &:hover {
+      transition: none !important;
+    }
+  }
+}
+
+.fusion-body .button-square,
+.fusion-body .fusion-button-square,
+.fusion-body .fusion-button.fusion-button-square,
+.fusion-button-square {
+  border-radius: 0;
+}
+
+.fusion-body .button-round,
+.fusion-body .fusion-button-round,
+.fusion-body .fusion-button.fusion-button-round,
+.fusion-button-round {
+  border-radius: 2px;
+
+  &.button-3d {
+    border-radius: 4px;
+  }
+}
+
+.fusion-body .button-pill,
+.fusion-body .fusion-button-pill,
+.fusion-body .fusion-button.fusion-button-pill,
+.fusion-button-pill {
+  border-radius: 25px;
+}
+
+#bbp_user_edit_submit,
+.bbp-submit-wrapper .button,
+.button-small,
+.fusion-button_size-small .fusion-button-default-size,
+.fusion-body .fusion-button-small,
+.single_add_to_cart_button,
+.wpcf7-form .wpcf7-submit.button-small,
+.wpcf7-form .wpcf7-submit.fusion-button-small {
+  .button-dimensions(32px, 20px, 9px, 14px, 12px, 2px);
+}
+
+.button-medium,
+.fusion-button_size-medium .fusion-button-default-size,
+.fusion-body .fusion-button-medium,
+.ticket-selector-submit-btn[type=submit],
+.wpcf7-form .wpcf7-submit.button-medium,
+.wpcf7-form .wpcf7-submit.fusion-button-medium {
+  .button-dimensions(38px, 23px, 11px, 16px, 13px, 3px);
+}
+
+#tribe-bar-form .tribe-bar-submit input[type=submit],
+.button-large,
+.fusion-button_size-large .fusion-button-default-size,
+.fusion-body .fusion-button-large,
+.tml-submit-wrap input[type="submit"],
+.wpcf7-form .wpcf7-submit.button-large,
+.wpcf7-form .wpcf7-submit.fusion-button-large {
+  .button-dimensions(43px, 29px, 13px, 17px, 14px, 4px);
+}
+
+.button-xlarge,
+.fusion-button_size-xlarge .fusion-button-default-size,
+.fusion-body .fusion-button-xlarge,
+.fusion-body .wpcf7-form .wpcf7-submit.button-xlarge,
+.fusion-body .wpcf7-form .wpcf7-submit.fusion-button-xlarge {
+  .button-dimensions(55px, 40px, 17px, 21px, 18px, 6px);
+}
+
+.button span {
+  line-height: normal;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .ls-container .button,
+  .ls-container .fusion-button,
+  .rev_slider .button,
+  .rev_slider .fusion-button {
+    .button-dimensions(32px, 20px, 0, 30px, 12px, 2px);
+    font-size: 10px !important;
+    line-height: 30px !important;
+    padding: 0 20px !important;
+
+    &.button-3d:active {
+      top: 2px !important;
+    }
+  }
+
+  .ls-container .button span,
+  .ls-container .fusion-button span,
+  .rev_slider .button span,
+  .rev_slider .fusion-button span {
+    font-size: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  .ls-container .button,
+  .ls-container .fusion-button,
+  .rev_slider .button,
+  .rev_slider .fusion-button {
+    .button-dimensions(32px, 20px, 0, 20px, 10px, 2px);
+    font-size: 10px !important;
+    line-height: 20px !important;
+    padding: 0 10px !important;
+
+    &.button-3d:active {
+      top: 2px !important;
+    }
+  }
+
+  .ls-container .button span,
+  .ls-container .fusion-button span,
+  .rev_slider .button span,
+  .rev_slider .fusion-button span {
+    font-size: 10px !important;
+  }
+}
+
+button.fusion-button.button-3d:active {
+  .button-box-shadow(0 1px 1px rgba(0, 0, 0, 0.2), 1px 2px 3px 2px rgba(0, 0, 0, 0.3), 0 0 0 #000);
+}
+
+.button-icon-left {
+  margin-right: 10px;
+}
+
+.button-icon-right {
+  margin-left: 10px;
+}
+
+.button-icon-divider-left,
+.button-icon-divider-right {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+
+  i {
+    position: relative;
+  }
+
+  img {
+    position: relative;
+
+    .button-small & {
+      max-width: 22px;
+    }
+
+    .button-medium & {
+      max-width: 23px;
+    }
+
+    .button-large & {
+      max-width: 24px;
+    }
+
+    .button-xlarge & {
+      max-width: 25px;
+    }
+  }
+}
+
+.button-icon-divider-left {
+  left: 0;
+  border-right: 1px solid;
+}
+
+.button-icon-divider-right {
+  right: 0;
+  border-left: 1px solid;
+}
+
+.button.green,
+.fusion-button.button-green,
+.fusion-button.button-green.wpcf7-submit {
+  .button-colors(#AAD75D, #D1E990, #9dba60, #54770f);
+
+  &:active,
+  &:focus,
+  &:hover {
+    .button-colors(#D1E990, #AAD75D, #9dba60, #54770f);
+  }
+  &.button-3d {
+    .button-3d-effect(#fff, #54770f);
+  }
+}
+
+.button.darkgreen,
+.fusion-button.button-darkgreen,
+.fusion-button.button-darkgreen.wpcf7-submit {
+  .button-colors(#a8c76a, #d0e0a5, #9dba60, #54770f);
+
+  &:active,
+  &:focus,
+  &:hover {
+    .button-colors(#d0e0a5, #a8c76a, #9dba60, #54770f);
+  }
+
+  &.button-3d {
+    .button-3d-effect(#fff, #54770f);
+  }
+}
+
+.button.orange,
+.fusion-button.button-orange,
+.fusion-button.button-orange.wpcf7-submit {
+  .button-colors(#f8bf56, #fbdc86, #c0830b, #c0830b);
+
+  &:active,
+  &:focus,
+  &:hover {
+    .button-colors(#fbdc86, #f8bf56, #c0830b, #c0830b);
+  }
+
+  &.button-3d {
+    .button-3d-effect(#fff, #c0830b);
+  }
+}
+
+.button.blue,
+.fusion-button.button-blue,
+.fusion-button.button-blue.wpcf7-submit {
+  .button-colors(#76c7f1, #b5e0f7, #1172c1, #1172c1);
+
+  &:active,
+  &:focus,
+  &:hover {
+    .button-colors(#b5e0f7, #76c7f1, #1172c1, #1172c1);
+  }
+
+  &.button-3d {
+    .button-3d-effect(#fff, #1172c1);
+  }
+}
+
+.button.darkblue,
+.fusion-button.button.button-darkblue,
+.fusion-button.button.button-darkblue.wpcf7-submit {
+  .button-colors(#2A6496, #428BCA, #072c5e, #072c5e);
+
+  &:active,
+  &:focus,
+  &:hover {
+    .button-colors(#428BCA, #2A6496, #072c5e, #072c5e);
+  }
+
+  &.button-3d {
+    .button-3d-effect(#fff, #072c5e);
+  }
+}
+
+.button.red,
+.fusion-button.button-red,
+.fusion-button.button-red.wpcf7-submit {
+  .button-colors(#fc7d7d, #fd9c9c, #9d1111, #9d1111);
+
+  &:active,
+  &:focus,
+  &:hover {
+    .button-colors(#fd9c9c, #fc7d7d, #9d1111, #9d1111);
+  }
+
+  &.button-3d {
+    .button-3d-effect(#fff, #9d1111);
+  }
+}
+
+.button.darkred,
+.fusion-button.button-darkred,
+.fusion-button.button-darkred.wpcf7-submit {
+  .button-colors(#b01818, #fe2020, #690e0e, #690e0e);
+
+  &:active,
+  &:focus,
+  &:hover {
+    .button-colors(#fe2020, #b01818, #690e0e, #690e0e);
+  }
+
+  &.button-3d {
+    .button-3d-effect(#fff, #690e0e);
+  }
+}
+
+.button.pink,
+.fusion-button.button-pink,
+.fusion-button.button-pink.wpcf7-submit {
+  .button-colors(#fc84c8, #fda1d5, #a31366, #a31366);
+
+  &:active,
+  &:focus,
+  &:hover {
+    .button-colors(#fda1d5, #fc84c8, #a31366, #a31366);
+  }
+
+  &.button-3d {
+    .button-3d-effect(#fff, #a31366);
+  }
+}
+
+.button.lightgray,
+.fusion-button.button-lightgray,
+.fusion-button.button-lightgray.wpcf7-submit {
+  .button-colors(#f0f0f0, #fbfbfb, #ababab, #ababab);
+
+  &:active,
+  &:focus,
+  &:hover {
+    .button-colors(#fbfbfb, #f0f0f0, #ababab, #ababab);
+  }
+
+  &.button-3d {
+    .button-3d-effect(#fff, #ababab);
+  }
+}
+
+.button.darkgray,
+.fusion-button.button-darkgray,
+.fusion-button.button-darkgray.wpcf7-submit {
+  .button-colors(#9e9e9e, #c0c0c0, #434c50, #434c50);
+
+  &:active,
+  &:focus,
+  &:hover {
+    .button-colors(#c0c0c0, #9e9e9e, #434c50, #434c50);
+  }
+
+  &.button-3d {
+    .button-3d-effect(#fff, #434c50);
+  }
+}
+
+.fusion-builder-elements-button-default-size {
+  &-default {
+    padding: 11px 23px;
+    line-height: 16px;
+    font-size: 13px;
+  }
+
+  &-3d {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 3px 0px var(--button_bevel_color), 1px 5px 5px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  &-small-default {
+    padding: 9px 20px;
+    line-height: 14px;
+    font-size: 12px;
+  }
+
+  &-small-3d {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 2px 0px var(--button_bevel_color), 1px 4px 4px 2px rgba(0, 0, 0, 0.3)
+  }
+
+  &-large-default {
+    padding: 13px 29px;
+    line-height: 17px;
+    font-size: 14px;
+  }
+
+  &-large-3d {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 4px 0px var(--button_bevel_color), 1px 6px 6px 3px rgba(0, 0, 0, 0.3)
+  }
+
+  &-xlarge-default {
+    padding: 17px 40px;
+    line-height: 21px;
+    font-size: 18px;
+  }
+
+  &-xlarge-3d {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 5px 0px var(--button_bevel_color), 1px 7px 7px 3px rgba(0, 0, 0, 0.3)
+  }
+}
+
+.fusion-builder-elements-button-quantity {
+  &-default {
+    line-height: 16px;
+    font-size: 13px;
+    width: 36px;
+    height: 36px;
+  }
+
+  &-small {
+    line-height: 14px;
+    font-size: 12px;
+    width: 31px;
+    height: 31px;
+  }
+
+  &-large {
+    line-height: 17px;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &-xlarge {
+    line-height: 21px;
+    font-size: 18px;
+    width: 53px;
+    height: 53px;
+  }
+}
+
+.fusion-button_size {
+  &-small {
+    .quantity {
+      width: 95px;
+    }
+  }
+
+  &-medium {
+    .quantity,
+    .single-product .product .summary .cart .quantity {
+      width: 110px;
+    }
+  }
+
+  &-large {
+    .quantity {
+      width: 122px;
+    }
+  }
+
+  &-xlarge {
+    .quantity {
+      width: 161px;
+    }
+  }
+}
+
+.fusion-builder-elements-button-main {
+  &-default {
+    background: var(--button_gradient_top_color);
+    color: var(--button_accent_color);
+    border-color: var(--button_accent_color);
+
+    .fusion-button-text {
+    	color: var(--button_accent_color);
+    }
+    &:hover {
+    	.fusion-button-text {
+				color: var(--button_accent_hover_color, var(--button_accent_color));
+    	}
+    }
+  }
+
+  &-gradient {
+    background-image: linear-gradient(to top, var(--button_gradient_bottom_color), var(--button_gradient_top_color));
+  }
+
+  &-hover {
+    background: var(--button_gradient_top_color_hover);
+    color: var(--button_accent_hover_color, var(--button_accent_color));
+    border-color: var(--button_accent_hover_color-fallback-to-transparent);
+  }
+
+  &-hover-gradient {
+    background-image: linear-gradient(to top, var(--button_gradient_bottom_color_hover), var(--button_gradient_top_color_hover));
+  }
+
+  &-visited {
+    color: var(--button_accent_color);
+  }
+
+  &-shape {
+    &-pill {
+      border-radius: 25px;
+    }
+
+    &-square {
+      border-radius: 0;
+    }
+
+    &-round {
+      border-radius: 2px;
+    }
+  }
+
+  &-small-3d-default {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 2px 0px var(--button_bevel_color), 1px 4px 4px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  &-small-3d-active {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 1px 0px var(--button_bevel_color), 1px 5px 5px 3px rgba(0, 0, 0, 0.3);
+  }
+
+
+  &-medium-3d-default {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 3px 0px var(--button_bevel_color), 1px 5px 5px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  &-medium-3d-active {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 1px 0px var(--button_bevel_color), 1px 5px 5px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  &-large-3d-default {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 4px 0px var(--button_bevel_color), 1px 5px 6px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  &-large-3d-active {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 1px 0px var(--button_bevel_color), 1px 6px 6px 3px rgba(0, 0, 0, 0.3);
+  }
+
+
+  &-xlarge-3d-default {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 5px 0px var(--button_bevel_color), 1px 7px 7px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  &-large-3d-active {
+    box-shadow: inset 0px 1px 0px #ffffff, 0px 2px 0px var(--button_bevel_color), 1px 7px 7px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  &-span-yes {
+    width: 100%;
+  }
+}
+
+.fusion-builder-elements-button-all {
+  font-family: var(--button_typography-font-family);
+  font-weight: var(--button_typography-font-weight);
+  font-style: var(--button_typography-font-style, normal);
+  letter-spacing: var(--button_typography-letter-spacing);
+  border-width: var(--button_border_width);
+  border-style: solid;
+	text-transform: var(--button_text_transform);
+	transition: all 200ms;
+}
+.fusion-button-span-yes {
+	width: 100%;
+}
+.fusion-button-default-span {
+  body.fusion-button_span-yes & {
+    width: 100%;
+  }
+}
+.fusion-button-default-shape {
+  body.fusion-button_shape-round & {
+    border-radius: 2px;
+  }
+  body.fusion-button_shape-square & {
+    border-radius: 0;
+  }
+  body.fusion-button_shape-pill & {
+     border-radius: 25px;
+  }
+}
+.fusion-button-default-size,
+button.button {
+  body.fusion-button_size-small & {
+    padding: 9px 20px;
+    line-height: 14px;
+    font-size: 12px;
+
+    &.button-3d {
+      &:active {
+        top: 2px;
+      }
+    }
+
+    .fusion-button-text {
+      &-left {
+        padding-left: 25px;
+      }
+
+      &-right {
+        padding-right: 25px;
+      }
+    }
+
+    .button-icon-divider {
+      &-left {
+        padding: 0 10px;
+      }
+
+      &-right {
+        padding: 0 10px;
+      }
+
+      &-left,
+      &-right {
+        i {
+          top: 50%;
+          margin-top: -6px;
+          display: block;
+        }
+      }
+    }
+  }
+  body.fusion-button_size-medium & {
+    padding: 11px 23px;
+    line-height: 16px;
+    font-size: 13px;
+
+    &.button-3d {
+      &:active {
+        top: 3px;
+      }
+    }
+
+    .fusion-button-text {
+      &-left {
+        padding-left: 28px;
+      }
+
+      &-right {
+        padding-right: 28px;
+      }
+    }
+
+    .button-icon-divider {
+      &-left {
+        padding: 0 12.5px;
+      }
+
+      &-right {
+        padding: 0 12.5px;
+      }
+
+      &-left,
+      &-right {
+        i {
+          top: 50%;
+          margin-top: -6.5px;
+          display: block;
+        }
+      }
+    }
+  }
+  body.fusion-button_size-large & {
+    padding: 13px 29px;
+    line-height: 17px;
+    font-size: 14px;
+
+    &.button-3d {
+      &:active {
+        top: 4px;
+      }
+    }
+
+    .fusion-button-text {
+      &-left {
+        padding-left: 34px;
+      }
+
+      &-right {
+        padding-right: 34px;
+      }
+    }
+
+    .button-icon-divider {
+      &-left {
+        padding: 0 14.5px;
+      }
+
+      &-right {
+        padding: 0 14.5px;
+      }
+
+      &-left,
+      &-right {
+        i {
+          top: 50%;
+          margin-top: -7px;
+          display: block;
+        }
+      }
+    }
+  }
+  body.fusion-button_size-xlarge & {
+    padding: 17px 40px;
+    line-height: 21px;
+    font-size: 18px;
+
+    &.button-3d {
+      &:active {
+        top: 6px;
+      }
+    }
+
+    .fusion-button-text {
+      &-left {
+        padding-left: 45px;
+      }
+
+      &-right {
+        padding-right: 45px;
+      }
+    }
+
+    .button-icon-divider {
+      &-left {
+        padding: 0 18.5px;
+      }
+
+      &-right {
+        padding: 0 18.5px;
+      }
+
+      &-left,
+      &-right {
+        i {
+          top: 50%;
+          margin-top: -9px;
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+	
+@media all and (max-width: 1199px)  {
+	.social-icons ul li{ padding-right:11px;}
+	.nbs-flexisel-item{ margin-right:25px !important;}
+	}
+	
+@media all and (max-width: 991px)  {
+	.social-icons p{ display:none;}
+	.navbar-default .navbar-nav > li{ padding-left:3px;}
+	.quick-links{ padding:0px 0px;}
+	.quick-contact ul{ padding-left:0px; padding-bottom:1px;}
+	.front2{ padding:15px;}
+	.front2 img{ padding:7px; margin-right:5px;}
+	.front2 h5{ font-size:15px;}
+	.back2 h5{ font-size:17px;}
+	.back2 p{ font-size:12px;}
+	}	
+	
+@media all and (max-width: 767px)  {
+	.flip-container{ min-height:175px;}
+	.benefits{ padding-top:25px;}
+	.flip-container{ margin-bottom:40px;}
+	.service-1 p{ min-height:90px;}
+	.service-1{ margin-bottom:15px;}
+	.front2{ padding:20px;}
+	.front2 img{ padding:10px; margin-right:5px;}
+	.front2 h5{ font-size:22px;}
+	.back2 h5{ font-size:22px;}
+	.back2 p{ font-size:14px;}
+	.quick-links{ border:none;}
+	.quick-contact{ border:none;}
+	.quick-contact h4{ padding-left:0px;}
+	.back2{ padding:0px 10px; height:110px;}
+	.op-feature-one{ padding-bottom:0px;}
+	
+.overViewTab .tab-content h3{
+	font-size:18px;
+}
+.innerWrap h2{
+	font-size:18px;
+	line-height:24px;
+}
+
+.logo-section-bg::before{
+	width:0;
+}
+.logo{
+	background:#fff;
+	padding-bottom:30px;
+}	
+.quickInfo li {
+	border:0;
+}
+	
+	
+	
+	}			
+	
+	
+	
+	
+	
+	
+	
+	

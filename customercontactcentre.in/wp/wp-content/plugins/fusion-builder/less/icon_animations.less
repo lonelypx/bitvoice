@@ -1,0 +1,292 @@
+@-webkit-keyframes fusionSonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@-moz-keyframes fusionSonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  100% {
+    -moz-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes fusionSonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fusionToRightFromLeft {
+  49% {
+    -webkit-transform: translate(100%);
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-100%);
+  }
+
+  51% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fusionToRightFromLeft {
+  49% {
+    -moz-transform: translate(100%);
+  }
+
+  50% {
+    opacity: 0;
+    -moz-transform: translate(-100%);
+  }
+
+  51% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fusionToRightFromLeft {
+  49% {
+    transform: translate(100%);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translate(-100%);
+  }
+
+  51% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fusionExpandAndShow {
+  0% {
+    -webkit-transform: scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fusionExpandAndShow {
+  0% {
+    -moz-transform: scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fusionExpandAndShow {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fusionExpandWidth {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 99%;
+  }
+}
+@-moz-keyframes fusionExpandWidth {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 99%;
+  }
+}
+@keyframes fusionExpandWidth {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 99%;
+  }
+}
+@keyframes fusionExpandHeight {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+@-webkit-keyframes fusionExpandHeight {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+@-moz-keyframes fusionExpandHeight {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+&.icon-hover-animation-slide {
+  .fontawesome-icon {
+    &.circle-yes {
+      overflow: hidden;
+    }
+
+    &:before {
+      display: block;
+      opacity: 1;
+    }
+  }
+}
+
+.icon-hover-animation-fade {
+  .fontawesome-icon {
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+.link-area-box-hover,
+.link-area-link-icon-hover {
+  &.icon-hover-animation-fade {
+    .fontawesome-icon {
+      transition: background-color 0.3s, color 0.3s;
+    }
+  }
+
+  &.icon-hover-animation-slide {
+    .fontawesome-icon:before {
+      display: block;
+      animation: fusionToRightFromLeft 0.3s forwards;
+    }
+  }
+
+  &.icon-hover-animation-pulsate {
+    .fusion-content-boxes & .heading {
+      overflow: visible;
+    }
+
+    .fontawesome-icon {
+      transition: background-color 0.3s, color 0.3s;
+
+      &:after {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        content: '';
+        box-sizing: content-box;
+        top: 0;
+        left: 0;
+        padding: 0;
+        z-index: -1;
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+        opacity: 0;
+        transform: scale(0.9);
+      }
+    }
+
+    .fontawesome-icon {
+      transform: scale(0.93);
+
+      &:after {
+        display: inline-block;
+        animation: fusionSonarEffect 1.3s ease-out 75ms;
+      }
+      @-moz-document url-prefix() {
+        &:after {
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+  }
+
+  &.icon-wrapper-hover-animation-pulsate {
+    .fusion-content-boxes & .heading {
+      overflow: visible;
+    }
+
+    .fontawesome-icon {
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .icon span {
+      transform: scale(0.93);
+
+      &:after {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        content: '';
+        box-sizing: content-box;
+        top: 0;
+        left: 0;
+        padding: 0;
+        z-index: -1;
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+        opacity: 0;
+        transform: scale(0.9);
+        display: inline-block;
+        animation: fusionSonarEffect 1.3s ease-out 75ms;
+      }
+    }
+  }
+}

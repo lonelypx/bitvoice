@@ -1,0 +1,136 @@
+.fusion-builder-option {
+  &.repeater {
+    .repeater-row {
+      padding: 0;
+      margin-bottom: 1em;
+      border: 1px solid #e2e2e2;
+      border-radius: 4px !important;
+      box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.06);
+      background: #ffffff;
+      transition: 0.2s all;
+      &:hover {
+        box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.08);
+        transition: 0.2s all;
+      }
+
+      .repeater-title {
+        margin: 0;
+        padding: 10px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          display: inline-block;
+          margin: 0 !important;
+          text-transform: capitalize;
+        }
+
+        .repeater-row-remove, .repeater-toggle-icon {
+          cursor: pointer;
+          font-size: 14px;
+          color: #93999f;
+          max-width: 20px;
+          width: 100%;
+          text-align: center;
+          &:hover {
+            color: #198fd9;
+          }
+        }
+        .repeater-row-remove.fusiona-trash-o {
+          &:hover {
+            color: #e54c6d;
+          }
+        }
+        .repeater-row-remove.fusiona-close-fb {
+          font-size: 11px;
+          &:hover {
+            color: #198fd9;
+          }
+        }
+      }
+
+      .repeater-fields {
+        padding: 30px 20px;
+        padding-top: 0;
+        margin: 0;
+        list-style: none;
+        display: none;
+        background: #f2f3f5;
+        border-top: 1px solid #e0e3e7;
+
+        > li {
+          margin: 26px 0 0 0;
+          .option-field {
+            input {
+              margin: 0;
+            }
+          }
+          .option-details {
+            h3 {
+              margin: 0 0 12px 0;
+              line-height: 1;
+            }
+            .description {
+              font-size: 12px;
+              color: #93999f;
+              margin: 0px 0px 12px 0px;
+              display: block;
+            }
+          }
+          .fusion-builder-option {
+            .select2-container {
+              .select2-selection {
+                box-shadow: 0 0 1px rgba(102, 113, 123, 0.26);
+              }
+            }
+          }
+        }
+      }
+      &.ui-sortable-placeholder {
+        background: #f3f3f3 !important;
+        border: 1px dashed #ddd !important;
+        visibility: visible !important;
+        box-shadow: none;
+        padding-left: 0;
+        padding-right: 0;
+        animation: none;
+        display: block;
+        height: 40px;
+      }
+    }
+  }
+  .option-field {
+    .repeater-row-add {
+      background: #198fd9;
+      color: #ffffff;
+      box-shadow: none;
+      border: none;
+      padding: 8px 20px;
+      font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+      font-weight: 600;
+      margin:0 0 20px 0;
+      border-radius: 3px;
+      height: auto;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-shadow: none;
+      font-size: 14px;
+      line-height: 26px;
+      transition: 0.2s all;
+
+      span.fusiona-plus{
+        margin: 0 5px 0 0;
+      }
+      &:hover, &:focus {
+        background: #1081c7;
+        transition: 0.2s all;
+
+      }
+    }
+  }
+}

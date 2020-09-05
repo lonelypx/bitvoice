@@ -1,0 +1,60 @@
+@modal-inner-padding: 20px; //** Padding applied to the modal body
+@modal-title-padding: 15px; //** Padding applied to the modal title
+@modal-title-line-height: @line-height-base; //** Modal title line-height
+@modal-content-bg: #fff; //** Background color of modal content area
+@modal-content-border-color: rgba(0,0,0,.2); //** Modal content border color
+@modal-content-fallback-border-color: #999; //** Modal content border color **for IE8**
+@modal-backdrop-bg: #000; //** Modal backdrop background color
+@modal-backdrop-opacity: 0.5; //** Modal backdrop opacity
+@modal-header-border-color: #e5e5e5; //** Modal header border color
+@modal-footer-border-color: @modal-header-border-color; //** Modal footer border color
+@zindex-modal: 99999;
+@zindex-modal-background: 99998;
+@modal-lg: 900px;
+@modal-md: 600px;
+@modal-sm: 300px;
+@modal-border-radius: 5px;
+
+.modal-dialog {
+  margin-top: 60px;
+}
+
+.fusion-modal {
+  -webkit-overflow-scrolling: auto !important;
+
+  .modal-header {
+    min-height: 54px;
+    box-sizing: border-box;
+
+    .modal-title {
+      clear: left;
+    }
+
+    .close {
+      font-size: 30px;
+      margin-top: -5px;
+      text-shadow: none;
+    }
+  }
+
+  .modal-dialog {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    max-height: ~'calc(100% - 90px)';
+  }
+
+  .fusion-separator {
+    width: 100% !important;
+  }
+}
+
+.ua-mobile {
+  .modal-open {
+    position: fixed;
+    overflow: hidden;
+
+    .fusion-modal .modal-dialog {
+      height: 90%;
+    }
+  }
+}

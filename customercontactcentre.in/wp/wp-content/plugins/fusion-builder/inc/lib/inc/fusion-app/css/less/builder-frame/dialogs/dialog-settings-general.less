@@ -1,0 +1,647 @@
+.fusion-builder-live {
+
+  .fusion-builder-settings-dialog.ui-dialog,
+  .fusion-builder-custom-tab {
+    padding: 0;
+    height: auto !important;
+
+    .fusion-settings-no-tabs {
+      display: none;
+    }
+
+    .ui-dialog-titlebar {
+      .ui-dialog-title {
+        line-height: 22px;
+        margin: 0;
+      }
+    }
+
+    .fusion_builder_module_settings {
+      position: static;
+    }
+
+    .fusion-builder-element-name-wrapper {
+      z-index: 1;
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      width: ~'calc(100% - 97px)';
+      font-size: 18px;
+    }
+
+    .fusion-builder-section-name {
+      margin: -5px -7px;
+      padding: 4px 6px;
+      width: 100%;
+      background: #22272d;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      font-size: 18px;
+      color: #ffffff;
+      font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+      font-weight: 600;
+
+      &::placeholder {
+        opacity: 1;
+      }
+
+      &:hover {
+        border: 1px solid #383f45;
+      }
+
+      &:focus {
+        background: #383f45;
+      }
+    }
+
+    .ui-dialog-content {
+      background: #fff;
+      width: 100% !important;
+    }
+
+    .ui-dialog-buttonpane {
+      margin-top: 0;
+      padding: 0;
+      border-radius: 0 0 3px 3px;
+      border-color: #e0e3e7;
+
+      .ui-dialog-buttonset {
+        float: none;
+
+        .ui-button {
+          width: 50%;
+          border: none;
+          font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+          font-weight: 700;
+          font-size: 14px;
+          margin: 0;
+          line-height: 40px;
+          outline: none;
+          transition: all 0.1s ease;
+
+          &:hover {
+            transition: all 0.1s ease;
+          }
+
+          &:first-child {
+            float: right;
+            background: #198fd9;
+            color: white;
+            border-radius: 0 0 3px 0;
+
+            &:hover {
+              background: #1081c7;
+            }
+          }
+
+          &:last-child {
+            float: left;
+            background: white;
+            color: #222;
+            border-radius: 0 0 0 3px;
+
+            &:hover {
+              color: #198fd9;
+            }
+          }
+        }
+      }
+    }
+
+    .fusion-builder-module-settings,
+    .fusion-builder-customizer-settings {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      overflow-x: hidden;
+
+      > li {
+        padding: 24px 20px;
+        border-bottom: 1px solid #f2f3f5;
+        background: #fff;
+
+        &.hidden {
+          display: none;
+        }
+
+        .fusion-panel-options {
+          li {
+            opacity: 0.3;
+            transition: all 0.1s ease;
+            a {
+              &.option-preview-toggle {
+                background: transparent;
+                padding: 0;
+                position: static;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .fusion-panel-options li {
+            opacity: 1;
+          }
+        }
+
+        .option-details-inner {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+
+          .fusion-panel-options {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          .description {
+            width: 100%;
+            flex: 101%;
+            margin-top: 0;
+            .fusion-panel-shortcut {
+              color: #0073aa;
+              cursor: pointer;
+            }
+          }
+
+          .insert-slider-video-wrap,
+          .insert-slider-video-wrap {
+            width: 100%;
+
+            a {
+              text-decoration: none;
+              color: #2a3035;
+            }
+          }
+        }
+        &.full-refresh-active,
+        &.partial-refresh-active {
+          position: relative;
+          &:before {
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: rgba(255, 255, 255, 0.75);
+            z-index: 2;
+          }
+          &:after {
+            width: 15px;
+            height: 15px;
+            content: "";
+            border-radius: 50%;
+            background-clip: padding-box;
+            position: absolute;
+            z-index: 5;
+            top: 61%;
+            left: 0;
+            right: 0;
+            margin: -10px auto 0;
+            color: transparent;
+            font-size: 10px;
+            border-top: 3px solid rgba(50, 143, 217,.2);
+            border-right: 3px solid rgba(50, 143, 217,.2);
+            border-bottom: 3px solid #328fd9;
+            border-left: 3px solid rgba(50, 143, 217,.2);
+            animation: fusion-rotate 0.8s infinite linear;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      h3 {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 0 12px;
+        color: #2a3035;
+      }
+
+      .fusion-panel-options {
+        padding: 0;
+        float: right;
+        display: flex;
+        list-style: none;
+
+        li {
+          margin: 0 0 0 10px;
+          position: relative;
+
+          a {
+            text-decoration: none;
+
+            i {
+              font-size: 14px;
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-image: linear-gradient(to top, #93999f, #93999f 50%, #198fd9 50%);
+              background-size: 55px 60px;
+              background-position: 0 -42px;
+              transition: all 0.25s ease;
+            }
+
+            &:hover,
+            &.active,
+            .fusion-active {
+              i {
+                transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+                background-position: 0 0;
+                transition: all 0.8s ease 0s;
+              }
+            }
+          }
+
+        }
+      }
+
+      .description {
+        display: none;
+      }
+
+      .description {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.6em;
+        color: #616970;
+
+        a {
+          color: #0073aa;
+          text-decoration: underline;
+          font-style: italic;
+        }
+
+        .fusion-builder-default-reset {
+          display: none;
+        }
+      }
+    }
+
+    .fusion-builder-option-container,
+    .fusion-panel-options {
+        .fusion-elements-option-tooltip {
+          background: #1d2226;
+          color: #ffffff;
+          border: 1px solid #1d2226;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          white-space: nowrap;
+          padding: 10px;
+          font-size: 11px;
+          font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          border-radius: 4px;
+          margin: 0;
+          z-index: 200;
+          visibility: hidden;
+          opacity: 0;
+          transition: all 0.2s ease 0.2s;
+          bottom: 100%;
+          pointer-events: none;
+
+          &:before {
+            content: "";
+            border: 5px solid transparent;
+            border-top-color: #1d2226;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: -11px;
+            z-index: 2;
+          }
+      }
+
+      li,
+      a:not(.ui-button) {
+        .fusion-elements-option-tooltip {
+          left: auto;
+          right: -20px;
+          transform: inherit;
+
+          &:before {
+            left: auto;
+            right: 21px;
+            transform: inherit;
+          }
+        }
+      }
+    }
+
+    .fusion-builder-option-container a,
+    .fusion-panel-options li {
+      &:hover .fusion-elements-option-tooltip {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.2s ease 0.2s;
+        margin-bottom: 10px;
+      }
+    }
+
+    .fusion-builder-customizer-settings {
+      overflow-x: visible;
+
+      li {
+        .fusion-panel-options {
+          li {
+            .fusion-elements-option-tooltip {
+              margin-right: 5px;
+
+              &:before {
+                right: 16px;
+              }
+            }
+          }
+        }
+      }
+      .fusion-builder-option {
+        .option-field {
+          .repeater-fields {
+            .fusion-builder-option {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .fusion-builder-module-settings {
+      li {
+        &:first-child {
+          .option-details {
+            .fusion-panel-options {
+              li {
+                .fusion-elements-option-tooltip {
+                  top: 100%;
+                  bottom: auto;
+
+                  &:before {
+                    border-top-color: transparent;
+                    border-bottom-color: #1d2226;
+                    top: 0;
+                    bottom: auto;
+                    margin-top: -11px;
+                    margin-bottom: 0;
+                  }
+                }
+
+                &:hover {
+                  .fusion-elements-option-tooltip {
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #general {
+      .fusion-builder-module-settings {
+        li {
+          &:nth-child(2) {
+            .option-details {
+              .fusion-panel-options {
+                li {
+                  .fusion-elements-option-tooltip {
+                    top: 100%;
+                    bottom: auto;
+
+                    &:before {
+                      border-top-color: transparent;
+                      border-bottom-color: #1d2226;
+                      top: 0;
+                      bottom: auto;
+                      margin-top: -11px;
+                      margin-bottom: 0;
+                    }
+                  }
+
+                  &:hover {
+                    .fusion-elements-option-tooltip {
+                      margin-top: 10px;
+                      margin-bottom: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .fusion-builder-customizer-settings,
+  .fusion-builder-module-settings {
+    .fusion-builder-option {
+        .fusion-builder-option-container {
+          textarea {
+            padding: 12px;
+            border: 1px solid #e0e3e7;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #2a3035;
+            background: #ffffff;
+            outline: 0;
+            box-shadow: inset 0 0 1px rgba(102, 113, 123, 0.16);
+
+            &:focus {
+              border-color: #198fd9;
+              box-shadow: inset 0 0 4px rgba(25, 143, 217, 0.16);
+            }
+          }
+        }
+    }
+  }
+
+  .fusion-builder-element-library-dialog.ui-dialog {
+    .fusion-add-to-nested {
+      border-top: 1px solid #e0e3e7 !important;
+      margin-top: 25px;
+    }
+  }
+
+  .fusion-builder-default-reset {
+    position: relative;
+
+    a,
+    span {
+      display: inline-block;
+    }
+
+    &.checked span,
+    a {
+      position: relative;
+      opacity: 1;
+      transition: all 0.1s ease;
+      bottom: 0;
+      box-shadow: none !important;
+    }
+
+    &.checked a,
+    span {
+      cursor: not-allowed;
+
+      i {
+        opacity: 0.6;
+        background-size: 55px 60px;
+        background-position: 0 -42px;
+      }
+    }
+  }
+
+  .ui-dialog-content {
+    .fusion-keyboard-shortcuts-wrapper {
+
+      h3 {
+        font-size: 14px;
+        margin: 0;
+        color: #2a3035;
+        font-weight: 700;
+      }
+
+      .fusion-shortcuts-list {
+        list-style: none;
+        padding: 30px 20px;
+        margin: 0;
+        border-bottom: 1px solid #f2f3f5;
+
+        li {
+          display: flex;
+          flex-flow: wrap;
+          align-items: center;
+          margin: 20px 0 0 0;
+
+          label {
+            width: 181px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #616970;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+            width: ~'calc(100% - 181px)';
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            li {
+              margin: 0 6px;
+              font-size: 14px;
+              font-weight: 400;
+              color: #616970;
+
+              p {
+                margin: 0;
+                border-radius: 4px;
+                min-width: 45px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #f2f3f5;
+                padding: 10px 14px;
+                box-shadow: 0 1px 1px 0 rgba(0,0,0,.08);
+                font-size: 12px;
+                font-weight: 600;
+                color: #616970;
+                letter-spacing: 0.03em;
+
+                i {
+                  font-style: normal;
+                  margin: 0 5px 0 0;
+                }
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          border: none;
+        }
+      }
+
+      .fusion-front-end-important-notice {
+        font-style: normal;
+        font-size: 13px;
+        line-height: 1.5;
+        background: #ffffff;
+        margin: 0 0 20px 0 !important;
+        width: 100%;
+        padding: 30px 30px 30px 45px;
+        border: 1px solid #f2f3f5;
+        position: relative;
+
+        strong {
+          color: #2a3035;
+          font-weight: 600;
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        &:before {
+          content: '!';
+          position: absolute;
+          top: 30px;
+          left: 20px;
+          display: block;
+          width: 18px;
+          height: 18px;
+          color: #fff;
+          text-align: center;
+          background-color: #198fd9;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &.fusion-hide-all-tooltips {
+
+    .fusion-builder-main-settings,
+    .fusion-builder-customizer-settings {
+      .option-details {
+        .fusion-panel-options {
+          li {
+            .fusion-elements-option-tooltip {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .ui-dialog {
+      .fusion-builder-module-settings {
+        li {
+          .fusion-panel-options {
+            li {
+              .fusion-elements-option-tooltip {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  a, button {
+    outline: 0;
+  }
+
+  .ui-dialog {
+    &.fusion-builder-keyboard-shortcuts-dialog,
+    &.fusion-builder-preferences-dialog {
+      width: 600px !important;
+    }
+  }
+}

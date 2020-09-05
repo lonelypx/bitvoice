@@ -1,0 +1,66 @@
+.fontawesome-icon {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+
+  &.circle-yes {
+    border-radius: 50%;
+    background-clip: inherit;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  &.circle-no {
+    &.size-large {
+      margin-top: 2px;
+    }
+
+    &.size-medium {
+      margin-top: 3px;
+    }
+
+    &.size-small {
+      margin-top: 5px;
+    }
+  }
+}
+
+.fusion-fa-align-left {
+  display: inline;
+  float: left;
+  margin: 0;
+
+  .fontawesome-icon {
+    margin: 0;
+  }
+}
+
+.fusion-fa-align-right {
+  display: inline;
+  float: right;
+  margin: 0;
+
+  .fontawesome-icon {
+    margin: 0;
+  }
+}
+
+.fusion-fa-align-center {
+  display: block;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  .fontawesome-icon {
+    margin: 0;
+
+    .fusion-body & {
+      float: none;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.fusion-builder-live {
+  .fusion-builder-module-controls-container {
+    position: absolute;
+    padding: 0;
+    background: #198FD9;
+    z-index: 9999999;
+    display: none;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.18);
+    font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+
+    .fusion-builder-module-controls {
+      display: flex;
+    }
+
+    a {
+      padding: 0;
+      width: 0;
+      height: 33px;
+      overflow: hidden;
+      opacity: 0;
+      font-size: 14px;
+      color: #fff;
+      display: block;
+      float: left;
+      line-height: 33px;
+      transition: opacity 0.25s ease, width 0.25s ease, color 0.1s ease;
+      text-align: center;
+      color: #fff;
+    }
+
+    .fusion-builder-container-controls,
+    .fusion-builder-column-controls-inner,
+    .fusion-builder-module-controls-inner,
+    .fusion-builder-child-controls,
+    .fusion-builder-nested-column-controls {
+      overflow: hidden;
+      &:hover {
+        overflow: visible;
+        a {
+          width: 33px;
+          opacity: 1;
+          color: rgba(255,255,255,0.7);
+
+          &:hover {
+            color: #fff;
+          }
+        }
+
+        .fusion-builder-container-settings,
+        .fusion-builder-column-settings,
+        .fusion-builder-settings {
+            background: #198FD9;
+        }
+      }
+    }
+  }
+
+  .fusion-global-element,
+  .fusion-global-parent-element,
+  .fusion-global-nested-row,
+  .fusion-global-column,
+  .fusion-global-container {
+    .fusion-builder-module-controls-container {
+      a {
+        color: #fff;
+      }
+      .fusion-builder-child-controls {
+        &:hover {
+          a {
+            color: rgba(255,255,255,0.6);
+
+            &:hover {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.fusion-dialog-ui-active.fusion-builder-no-ui {
+    &:not(.fusion-builder-ui-wireframe){
+      .fusion-builder-live-child-element, .fusion-builder-nested-element {
+        .fusion-builder-module-controls-container, .fusion-builder-module-controls-type-row-nested {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.fusion-imageframe {
+  display: inline-block;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  max-width: 100%;
+
+  img {
+    vertical-align: top;
+    box-shadow: none !important;
+  }
+
+  &.element-bottomshadow {
+    overflow: visible;
+
+    &:after,
+    &:before {
+      box-shadow: 0 17px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    img {
+      margin: 0;
+      vertical-align: top;
+      box-shadow: none !important;
+    }
+  }
+}
+/* bottom shadow classes in taglinebox.less */
+.imageframe-align-center {
+  text-align: center;
+}

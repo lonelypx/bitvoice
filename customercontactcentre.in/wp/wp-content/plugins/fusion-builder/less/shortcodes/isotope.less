@@ -1,0 +1,60 @@
+/**** Isotope Filtering ****/
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  z-index: 1;
+}
+/**** Isotope CSS3 transitions ****/
+.isotope,
+.isotope .isotope-item {
+  transition-duration: 0.8s;
+}
+
+.isotope {
+  transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  transition-property: transform, opacity;
+}
+/**** disabling Isotope CSS3 transitions ****/
+.isotope .isotope-item.no-transition,
+.isotope.no-transition,
+.isotope.no-transition .isotope-item {
+  transition-duration: 0s;
+}
+
+#wrapper #posts-container .fusion-grid-sizer,
+#wrapper .fusion-grid-sizer {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  min-height: 0;
+  visibility: hidden;
+}
+@masonry-height-size: 80%;
+
+.fusion-masonry-element-container {
+  background-size: cover;
+  background-position: center center;
+
+  .fusion-element-grid & {
+    padding-top: @masonry-height-size;
+  }
+
+  .fusion-element-landscape & {
+    padding-top: @masonry-height-size / 2;
+  }
+
+  .fusion-element-portrait & {
+    padding-top: @masonry-height-size * 2;
+  }
+
+  > img,
+  .fusion-image-wrapper > img,
+  .fusion-placeholder-image {
+    display: none;
+  }
+}

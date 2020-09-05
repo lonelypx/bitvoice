@@ -1,0 +1,33 @@
+.fusion-builder-option {
+    &.custom,
+    &.info {
+        padding: 24px 20px;
+        background: lighten(@light-gray, 10%);
+
+        .important-description {
+            position: relative;
+            padding: 10px 0;
+
+            a {
+                color: #198fd9;
+            }
+
+            strong:first-child {
+                display: block;
+                margin-bottom: 10px;
+
+                &:before {
+                    content: '!';
+                    margin-right: 10px;
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    color: #fff;
+                    text-align: center;
+                    background-color: #198fd9;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

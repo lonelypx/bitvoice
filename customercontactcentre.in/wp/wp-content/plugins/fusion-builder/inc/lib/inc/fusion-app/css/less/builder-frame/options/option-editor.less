@@ -1,0 +1,195 @@
+.fusion-builder-live {
+  .mce-menu {
+      .mce-in.mce-animate {
+          transition: opacity 0.25s ease, transform 0.25s ease;
+      }
+
+      .mce-menu-item {
+          transition: background-color 0.1s ease;
+
+          &:hover {
+              background-color: #198fd9;
+          }
+      }
+  }
+}
+
+.fusion-builder-option {
+  &.tinymce {
+    .switch-html {
+      float: right;
+    }
+    .switch-tmce {
+      float: left;
+    }
+  }
+
+  .wp-editor-wrap {
+    .wp-editor-tools {
+      .wp-media-buttons {
+        .add_media {
+          background: #ffffff;
+          border: 1px solid #f2f3f5;
+          box-shadow: none;
+          padding: 6px 6px;
+          height: auto;
+          line-height: normal;
+          font-weight: 600;
+          box-shadow: 0 1px 1px rgba(102, 113, 123, 0.08);
+          transition: border-color 0.1s ease;
+
+          .wp-media-buttons-icon {
+            color: #198fd9;
+            margin: 0 2px;
+
+            &:before {
+              content: "\e620";
+              font-family: 'fusion-builder-icons';
+            }
+          }
+          &:hover {
+            border-color: #d6d6d6;
+          }
+        }
+      }
+      .wp-editor-tabs {
+        .wp-switch-editor {
+          background: #ffffff;
+          padding: 6px 15px;
+          border-radius: 4px 4px 0 0;
+          border-color: #f2f3f5;
+          border-bottom: 0;
+          margin: 2px 0 0 5px;
+        }
+      }
+    }
+    &.html-active {
+      .wp-editor-tabs {
+        .switch-html {
+          background:#f5f5f5;
+          padding-bottom: 7px;
+        }
+      }
+    }
+   &.tmce-active {
+      .wp-editor-tabs {
+       .switch-tmce {
+          background:#f5f5f5;
+          padding-bottom: 7px;
+        }
+      }
+    }
+    .wp-editor-container {
+      border: 1px solid #f5f5f5;
+      .mce-container-body {
+        .mce-container {
+          &:before {
+            box-shadow: none;
+          }
+          .mce-container-body {
+            .mce-container {
+              border-bottom: none;
+              background: #f2f3f5;
+              .mce-widget {
+                  transition: background-color 0.1s ease;
+                &.mce-listbox {
+                  background: transparent;
+                  border: none;
+                  button {
+                    color: #2a3035;
+                    border: 1px solid #e0e3e7;
+                    border-radius: 4px !important;
+                    box-shadow: 0 1px 1px rgba(102, 113, 123, 0.08);
+                    background: #fff;
+                    position: relative;
+                    padding: 4px 8px;
+                  }
+                }
+
+                &:not(.mce-listbox) {
+                  border-radius: 4px;
+                  width: 28px;
+                  height: 28px;
+                  border:none;
+
+                  button {
+                    width: 100%;
+                    height: 100%;
+                  }
+                  i {
+                      transition: color 0.1s ease;
+                  }
+                  &:hover {
+                    background: #ffffff;
+                    box-shadow:none;
+                    i {
+                      color: #198fd9;
+                    }
+                  }
+                }
+
+                &.mce-splitbtn {
+                    width: 43px;
+
+                    button {
+                        width: 28px;
+                    }
+
+                    .mce-open {
+                        width: 15px;
+                        padding: 0;
+
+                        .mce-caret {
+                            margin: 2px 1px 0 1px;
+                        }
+                    }
+
+                    &:hover {
+                        .mce-open {
+                            border-left-color: #f2f3f5;
+                        }
+                    }
+                }
+
+                &.mce-active {
+                  background: #198fd9 !important;
+                  i {
+                    color:#ffffff !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .quicktags-toolbar {
+        background:#f5f5f5;
+        border-bottom: none;
+
+        .button {
+          background-color: #ffffff;
+          border: 1px solid #e6e6e6;
+          margin: 2.5px;
+          box-shadow: none;
+          padding: 5px 10px;
+          height: auto;
+          line-height: normal;
+          border-radius: 4px;
+          height: 26px;
+          &:hover {
+            background-color: #f9f9f9;
+          }
+        }
+      }
+      .fusion-editor-field {
+        border: none;
+        box-shadow: none;
+      }
+      .wp-editor-area {
+        border-radius: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}

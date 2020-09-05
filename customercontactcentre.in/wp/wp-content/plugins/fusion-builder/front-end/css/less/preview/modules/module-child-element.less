@@ -1,0 +1,201 @@
+.fusion-builder-live {
+  .fusion-builder-live-child-element {
+    position: relative;
+
+    &:hover {
+      &:after {
+        border: 1px dashed #3cb9f0;
+        position: absolute;
+        pointer-events: none;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .fusion-builder-module-controls-container {
+        display: block;
+        bottom: 0;
+        top: auto;
+        left: auto;
+        right: 0;
+
+        a {
+          cursor: pointer;
+
+          &.fusion-builder-add-child,
+          &.fusion-builder-settings-child {
+            display: block;
+            opacity: 1;
+            width: 33px;
+            color: #fff;
+          }
+
+          &.fusion-builder-settings-child {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            background-color: #2a3035;
+          }
+        }
+
+        .fusion-builder-module-controls:not(.fusion-builder-controls-wireframe) {
+          &:hover {
+            .fusion-builder-settings-child {
+              background: #198FD9;
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.fusion-flip-box-wrapper {
+      min-height: 0;
+    }
+
+    &.fusion-gallery-column {
+      display: block;
+    }
+  }
+
+  &:not(.fusion-builder-ui-wireframe) {
+    .fusion-builder-live-element {
+      &.fusion-global-parent-element {
+        .fusion-builder-live-child-element {
+          &:hover {
+            &:after {
+              border-color: #fe4774;
+            }
+          }
+        }
+
+        .fusion-builder-live-child-element {
+          .fusion-builder-module-controls-container {
+            background: #fe4774;
+          }
+
+          .fusion-builder-module-controls {
+            &:hover {
+              .fusion-builder-settings-child {
+                background: #fe4774 !important;
+              }
+            }
+          }
+        }
+        >.fusion-builder-module-controls-container {
+          background: transparent !important;
+        }
+      }
+    }
+    .fusion-global-element,
+    .fusion-global-parent-element,
+    .fusion-global-nested-row,
+    .fusion-global-column,
+    .fusion-global-container {
+      .fusion-builder-live-child-element {
+        &:hover {
+          &:after {
+            border-color: #fe4774;
+          }
+        }
+      }
+    }
+
+    .fusion-counters-box {
+      .fusion-builder-live-child-element.fusion-column:hover:after {
+        margin-left: 7px;
+        margin-right: 7px;
+      }
+    }
+
+    .fusion-content-boxes {
+      .fusion-builder-live-child-element {
+        &.fusion-column:hover:after {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+
+        .fusion-builder-module-controls-container {
+          right: 15px;
+        }
+      }
+    }
+
+    .fusion-flip-boxes {
+      .fusion-builder-live-child-element {
+        &.fusion-column:hover:after {
+          margin-left: 15px;
+          margin-right: 15px;
+          margin-bottom: 15px;
+        }
+
+        .fusion-builder-module-controls-container {
+          right: 15px;
+          bottom: 15px;
+        }
+      }
+    }
+
+    .fusion-gallery-container {
+      .fusion-builder-live-child-element:hover:after {
+        margin-left: 5px;
+        margin-right: 5px;
+      }  
+    }
+  }
+
+  &.fusion-builder-no-ui {
+    &:not(.fusion-builder-ui-wireframe) {
+
+      .fusion-builder-live-child-element,
+      .fusion-builder-nested-element {
+
+        .fusion-builder-module-controls-container,
+        .fusion-builder-module-controls-type-row-nested {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  &:not(.nested-ui-active) {
+      .fusion_builder_row_inner {
+        &.fusion-builder-nested-element {
+          .fusion-builder-live-element {
+            .fusion-child-element {
+              &.fusion-checklist {
+                li {
+                  pointer-events: none;
+                  &:after {
+                    border: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+  &.nested-ui-active {
+    .fusion_builder_row_inner {
+      &.fusion-builder-nested-element {
+        .fusion-builder-live-element {
+          .fusion-child-element {
+            &.fusion-checklist {
+              li {
+                &:hover {
+                  .fusion-builder-module-controls-container {
+                    display: block;
+                    transition: inherit;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

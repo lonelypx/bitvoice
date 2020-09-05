@@ -1,0 +1,167 @@
+.wp-full-overlay-sidebar {
+  background: #fff;
+}
+.customize-control {
+  margin-bottom: 25px;
+}
+.customize-control-kirki-slider input[type=range] {
+  background-color: #f0f1f3;
+}
+.customize-control-kirki-slider input[type=range]:hover {
+  background-color: #b7bcc6;
+}
+.customize-control-kirki-slider input[type=range]::-webkit-slider-thumb {
+  background-color: #35BAF1;
+}
+.customize-control-kirki-slider input[type=range]::-moz-range-thumb {
+  background-color: #35BAF1;
+}
+.customize-control-kirki-slider input[type=range]::-ms-thumb {
+  background-color: #35BAF1;
+}
+.customize-control-kirki-slider .kirki_range_value {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0 5px;
+  font-weight: 400;
+  position: relative;
+  top: 2px;
+}
+.customize-control-kirki-slider .kirki-slider-reset {
+  color: rgba(0, 0, 0, 0.2);
+  float: right;
+  transition: color 0.5s ease-in;
+}
+.customize-control-kirki-slider .kirki-slider-reset span {
+  font-size: 16px;
+  line-height: 22px;
+}
+.customize-control-kirki-slider .kirki-slider-reset:hover {
+  color: red;
+}
+.customize-control-kirki-switch .switch label {
+  border-radius: 20px;
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.customize-control-kirki-switch .switch label:after {
+  border-radius: 50%;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+.customize-control-kirki-switch .switch label .switch-on {
+  display: none;
+}
+.customize-control-kirki-switch .switch-on {
+  float: left;
+}
+.customize-control-kirki-switch .switch-off {
+  float: right;
+}
+.customize-control-kirki-switch .switch-off,
+.customize-control-kirki-switch .switch-on {
+  font-weight: 400;
+}
+.customize-control-kirki-switch .switch input:checked + label {
+  background: #35BAF1;
+}
+.customize-control-kirki-switch .switch input:checked + label .switch-on {
+  display: block;
+}
+.customize-control-kirki-switch .switch input:checked + label .switch-off {
+  display: none;
+}
+.customize-control-kirki-switch .switch input:checked + label:after {
+  left: auto !important;
+  right: 5px !important;
+}
+#customize-controls input[type=checkbox],
+#customize-controls input[type=color],
+#customize-controls input[type=date],
+#customize-controls input[type=datetime-local],
+#customize-controls input[type=datetime],
+#customize-controls input[type=email],
+#customize-controls input[type=month],
+#customize-controls input[type=number],
+#customize-controls input[type=password],
+#customize-controls input[type=radio],
+#customize-controls input[type=search],
+#customize-controls input[type=tel],
+#customize-controls input[type=text],
+#customize-controls input[type=time],
+#customize-controls input[type=url],
+#customize-controls input[type=week],
+#customize-controls select,
+#customize-controls textarea {
+  background-color: #f0f1f3;
+  border: 1px solid #eee;
+  box-shadow: none;
+  border-radius: 3px;
+}
+#customize-controls .fusion-customizer-heading {
+  padding: 20px 12px;
+  text-transform: uppercase;
+  background: #f0f1f3;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin: 35px -12px;
+}
+.fusion-redux-important-notice {
+  background: #f0f1f3;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 20px 12px;
+  font-weight: 200;
+  font-size: 1.12em;
+}
+.fusion-redux-important-notice strong {
+  color: #35BAF1;
+}
+.customize-control-kirki-radio-buttonset .buttonset .switch-label {
+  padding: 0.25em;
+  border: none;
+  margin: 3px;
+  border-radius: 3px;
+}
+.customize-control-kirki-radio-buttonset .buttonset .switch-label:first-child {
+  margin-left: 0;
+}
+.customize-control-kirki-radio-buttonset .buttonset .switch-label:last-child {
+  margin-right: 0;
+}
+.customize-control-kirki-radio-buttonset .buttonset .switch-input:checked + .switch-label {
+  background: #35BAF1;
+}
+.select2-container--default .select2-selection--single {
+  background-color: #f0f1f3;
+  border: 1px solid #eee;
+  box-shadow: none;
+  border-radius: 3px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border: none;
+  top: calc(50% - 6px);
+  left: 25%;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b:after {
+  content: "\f347";
+  font-family: dashicons;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border: none;
+  top: calc(50% - 6px);
+  left: 25%;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b:after {
+  content: "\f343";
+}
+.kirki-controls-loading-spinner {
+  background-color: #fff !important;
+}
+#customize-controls #customize-info {
+  margin-bottom: 0;
+}
+#customize-control-fusion_options-bg_pattern img {
+  width: auto;
+  height: 30px;
+}
+/*# sourceMappingURL=customizer-styles.css.map */

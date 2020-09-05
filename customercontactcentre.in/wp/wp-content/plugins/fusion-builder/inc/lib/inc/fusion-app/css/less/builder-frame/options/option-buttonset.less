@@ -1,0 +1,249 @@
+.fusion-builder-option {
+
+  &.import,
+  &.export,
+  &.radio-buttonset,
+  &.radio_button_set,
+  &.checkbox_button_set {
+
+    .fusion-form-radio-button-set.ui-buttonset,
+    .fusion-form-checkbox-button-set.ui-buttonset {
+      display: flex;
+      margin: 0 -2px;
+      float: none;
+      font-size: 13px;
+
+      a.ui-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        margin: 0;
+        border: none;
+        background: #f2f3f5;
+        border-radius: 0;
+        padding: 10.5px 12px;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        min-width: 60px;
+        color: #93999f;
+        transition: all 0.25s ease;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif !important;
+
+        &:first-of-type {
+          margin-left: 0;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+
+
+        &:last-of-type {
+          margin-right: 0;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          border-right: none;
+        }
+
+        &.ui-state-active {
+          background-color: #198fd9;
+          color: @text-color-on-blue;
+
+          svg {
+            fill: @text-color-on-blue;
+          }
+        }
+
+        &.ui-state-active[data-value="false"],
+        &.ui-state-active[data-value="no"],
+        &.ui-state-active[data-value="off"],
+        &.ui-state-active[aria-label="no"],
+        &.ui-state-active[aria-label="No"] {
+          background: #2a3035;
+        }
+
+        &:hover:not(.ui-state-active) {
+          color: #2a3035;
+          transition: all 0.1s ease;
+
+          svg {
+            fill: #2a3035;
+          }
+        }
+
+        &.buttonset-item[class*=" fusiona-"] {
+          font-family: 'fusion-builder-icons' !important;
+        }
+
+        svg {
+          fill: #93999f;
+        }
+      }
+
+      &.fusion-option-divider_candy {
+          a.ui-button {
+              &:nth-of-type(2) {
+                margin-right: 0;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+                border-right: none;
+              }
+
+              &[data-value="bottom,top"] {
+                  border-left: 1px solid rgba(0, 0, 0, 0.1);
+              }
+          }
+      }
+    }
+
+    .fusion-form-checkbox-button-set.ui-buttonset {
+      .ui-button {
+        &a.ui-state-active {
+          border-radius: 0 !important;
+        }
+      }
+    }
+
+    .has-tooltip {
+      .fusion-builder-live:not(.fusion-hide-all-tooltips) & {
+        position: relative;
+        overflow: hidden;
+
+        &:after,
+        &:before {
+          transition: all 0.2s ease 0.2s;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          line-height: normal;
+          z-index: 999999;
+        }
+
+        &.fusion-builder-support {
+
+          &:after,
+          &:before {
+            left: 10%;
+          }
+        }
+
+        &:after {
+          content: attr(aria-label);
+          top: 48px;
+          background: #1d2226;
+          color: #ffffff;
+          border: 1px solid #1d2226;
+          white-space: nowrap;
+          padding: 10px;
+          font-size: 11px;
+          font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          border-radius: 4px;
+          margin: 0;
+          z-index: 999999;
+          pointer-events: none;
+        }
+
+        &:before {
+          content: "";
+          border: 5px solid transparent;
+          border-bottom-color: #1d2226;
+          top: 38px;
+          z-index: 2;
+          pointer-events: none;
+        }
+
+        &.fusion-builder-support {
+          &:before {
+            left: 52% !important;
+          }
+        }
+
+        &:hover {
+          overflow: visible;
+
+          &:not(.active):after,
+          &:not(.active):before {
+            opacity: 1;
+          }
+
+          &:after {
+            top: 50px;
+          }
+
+          &:before {
+            top: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .fusion-builder-option-container {
+    .fusion-option-bg_pattern {
+      display: flex;
+      flex-flow: wrap;
+
+      .ui-button {
+        width: 34px;
+        height: 34px;
+        padding: 0;
+        margin: 2.5px;
+        border-color: #d9d9d9;
+
+        &.ui-state-active {
+          border-width: 3px;
+          border-color: #0073aa;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.fusion-form-radio-button-set {
+  .ui-button {
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .ui-state-active,
+  .ui-state-active:hover {
+    background-color: #198fd9;
+    border-color: #198fd9;
+  }
+}
+.preset {
+  .fusion-form-radio-button-set {
+    .ui-button {
+      &:last-child {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+.fusion-form-checkbox-button-set {
+  a.buttonset-item {
+    &.ui-state-active {
+      background-color: @blue;
+      color: @text-color-on-blue;
+      border-color: @text-color-on-blue;
+
+      &:hover {
+        background-color: darken(@blue, 2%);
+        color: @text-color-on-blue;
+        border-color: darken(@blue, 3%);
+      }
+    }
+  }
+}

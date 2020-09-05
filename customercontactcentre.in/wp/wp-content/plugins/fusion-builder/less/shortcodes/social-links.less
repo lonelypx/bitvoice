@@ -1,0 +1,107 @@
+@icon-color: #46494A;
+@boxed-icon-color: #fff;
+@boxed-icon-bg: @icon-color;
+
+.fusion-social-networks {
+	overflow: hidden;
+
+	.fusion-social-networks-wrapper {
+		margin: 0 -10px;
+	}
+
+	.fusion-social-network-icon {
+		display: inline-block;
+		margin: 0 10px 10px;
+		font-size: 16px;
+		color: @icon-color;
+		text-decoration: none;
+		box-shadow: none !important;
+		line-height: 1;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&:before {
+			color: inherit;
+		}
+	}
+
+	&.boxed-icons {
+		a {
+			text-align: center;
+			box-sizing: border-box;
+			box-shadow: none !important;
+		}
+
+		.fusion-social-networks-wrapper {
+			margin: 0 -5px;
+		}
+
+		.fusion-social-network-icon {
+			margin: 0 5px 10px;
+			padding: 8px;
+			background-color: @boxed-icon-bg;
+			border: none;
+			border-radius: 3px;
+			background-clip: inherit;
+			border: 1px solid @boxed-icon-bg;
+			color: @boxed-icon-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.fusion-social-links-footer {
+	display: table-cell;
+	vertical-align: middle;
+	width: 40%;
+	text-align: right;
+
+	.fusion-social-networks {
+		margin-top: 10px;
+	}
+}
+
+.widget {
+	.fusion-social-networks {
+		.fusion-social-networks-wrapper {
+			margin: 0 -5.5px;
+		}
+
+		.fusion-social-network-icon {
+			margin: 0 5.5px 14px;
+		}
+
+		&.boxed-icons {
+			.fusion-social-networks-wrapper {
+				margin: 0 -3.5px;
+			}
+
+			.fusion-social-network-icon {
+				margin: 0 3.5px 10px;
+			}
+		}
+	}
+}
+
+.fusion-social-links {
+	.fusion-social-networks {
+		a {
+			font-size: var(--social_links_font_size);
+		}
+	}
+	.boxed-icons {
+		.fusion-social-networks-wrapper {
+			.fusion-social-network-icon {
+				width: ~"calc(var(--social_links_font_size) + (2 * (var(--social_links_boxed_padding))) + 2px)";
+			}
+		}
+
+		&.fusion-social-networks {
+			a {
+				padding: var(--social_links_boxed_padding);
+			}
+		}
+	}
+}

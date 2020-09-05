@@ -1,0 +1,505 @@
+.fusion-builder-live {
+  .fusion-builder-dialog.ui-dialog {
+    font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+    border: none !important;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+    padding: 0;
+    overflow: hidden;
+
+    .fusion-builder-all-elements-container {
+      padding: 0 20px;
+    }
+
+    &.fusion-builder-settings-dialog {
+      background: transparent;
+    }
+
+    #fusion-loader,
+    .fusion-loader {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 1);
+      z-index: 999;
+      display: none;
+      top: 0;
+      left: 0;
+    }
+
+    /* Modal Tabs */
+    .fusion-tabs-menu {
+      background: #198fd9;
+      padding: 0;
+      list-style: none;
+      clear: both;
+      margin: 0;
+      display: flex;
+
+      li {
+        display: inline-flex;
+        position: relative;
+
+        a {
+          display: block;
+          padding: 11px 20px;
+          color: #fff;
+          font-weight: 600;
+          font-size: 14px;
+          font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+          text-decoration: none;
+          transition: background-color 0.1s ease;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:hover {
+            background: #0e7abd;
+          }
+        }
+
+        &.current {
+          a {
+            background: #0e7abd;
+          }
+        }
+      }
+    }
+
+    .fusion-builder-modal-search {
+      position: absolute;
+      right: 90px;
+      top: 12px;
+      height: 36px;
+      border-radius: 3px;
+      padding: 0 15px;
+      border: 1px solid #3f464c;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+      background-color: #383f45;
+      color:#93999f;
+
+      label {
+        span {
+          display: none;
+        }
+      }
+
+      .fusion-elements-filter {
+        width: auto;
+        font-size: 14px;
+        height: 100%;
+        outline: none;
+        padding: 5px 0 5px 10px;
+        border: none;
+        background:#383f45;
+        color: #ffffff;
+      }
+    }
+
+    .ui-dialog-content {
+      padding: 0;
+    }
+
+    .ui-dialog-titlebar {
+      background: #23282d;
+      border: none;
+      font-size: 18px;
+      padding: 15px 20px;
+      color:#ffffff;
+      font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+      border-radius: 0;
+
+      .ui-dialog-title {
+        font-weight: 600;
+      }
+
+      .ui-dialog-titlebar-close {
+        font-family: 'fusion-builder-icons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        border: none;
+        background: none;
+        text-indent: 0;
+        width: auto;
+        height: auto;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        width: 60px;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        margin-right: 10px;
+
+        &:active,
+        &:focus,
+        &:hover {
+          background: none;
+          border: none;
+          color: #ffffff;
+        }
+
+        .ui-button-text,
+        .ui-icon {
+          display: none;
+        }
+
+        &:before {
+          font-size: 14px;
+          display: block;
+          content: "\e904";
+        }
+      }
+    }
+
+    &.fusion-video-dialog {
+      .ui-dialog-titlebar {
+        border-bottom: 1px solid #dcdcdc;
+        padding: 0;
+
+        .ui-dialog-title {
+          padding: 1em 25px;
+          margin: 0;
+          width: ~'calc(100% - 60px)';
+        }
+
+        .ui-dialog-titlebar-ƒ {
+          top: 20px !important;
+          width: 60px;
+          right: 0;
+          height: auto;
+        }
+      }
+
+      .ui-dialog-content {
+        padding: 1em 25px 30px;
+        width: 100% !important;
+        overflow: hidden;
+
+        iframe {
+          width: 100% !important;
+        }
+      }
+    }
+
+    &.fusion-builder-css-dialog {
+      max-width: 380px;
+    }
+    .fusion-builder-controls {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  // Error dialog.
+  .fusion-builder-dialog.ui-dialog.fusion-builder-error-dialog {
+    background-color: #fff;
+
+    .ui-dialog-titlebar {
+      background: transparent;
+      color: inherit;
+
+      .ui-dialog-titlebar-close {
+        color: inherit;
+        display: none;
+      }
+
+      .icon.type-warning {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        color: #e0284f;
+        text-align: center;
+        margin-right: 20px;
+        background-color: rgba(244, 40, 79, 0.1);
+        border-radius: 50%;
+
+        i {
+          line-height: 32px;
+        }
+      }
+    }
+
+    .ui-dialog-content {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 9px 20px 30px;
+      font-size: 14px;
+      line-height: 22px;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #198fd9;
+      }
+    }
+  }
+
+  &.fusion-builder-blank-page-active {
+      .fusion-builder-container-library-dialog {
+          li a[href="#misc"] {
+              display: none;
+          }
+      }
+  }
+}
+
+.ui-dialog {
+  z-index: 99999 !important;
+}
+
+
+
+.fusion-builder-live {
+  #customize-controls #fusion-builder-sections-eo,
+  .fusion-builder-dialog.ui-dialog {
+    .fusion-builder-dialog-more-options {
+      font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+      position: absolute;
+      z-index: 999;
+      background: #fff;
+      color: #333;
+      padding: 10px 0;
+      left: auto;
+      right: -21px;
+      top: 45px;
+      width: 270px;
+      opacity: 0;
+      pointer-events: none;
+      border-radius: 6px;
+      box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(0, 0, 0, 0);
+      cursor: auto;
+      transition: opacity 0.2s, top 0.2s;
+
+      .resize-section-wrap {
+        display: flex;
+        align-items: center;
+      }
+      .resize-section-title {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #93999f;
+        letter-spacing: 1;
+        padding: 5px 10px 5px 27px;
+        display: inline-block;
+      }
+
+      .resize-icons {
+
+        .resize-icon {
+          display: inline-block;
+          padding: 12px 8px;
+          cursor: pointer;
+
+          svg {
+            fill: #93999f;
+            width: 16px;
+            height: 16px;
+            transition: all 0.1s ease;
+          }
+
+          &:hover,
+          &.active {
+            svg {
+              fill: #198fd9;
+            }
+          }
+        }
+      }
+
+      .dialog-more-options-section-menu {
+        margin: 0 10px;
+
+        .dialog-more-menu-items {
+          margin: 10px 0 0;
+          list-style: none;
+          padding: 0;
+          font-size: 14px;
+          line-height: 2em;
+          color: #2a3035;
+          font-weight: 400;
+
+          .dialog-more-menu-item {
+            padding: 9px 0;
+            cursor: pointer;
+            transition: all 0.1s ease;
+
+            span {
+              padding: 0 15px 0 20px;
+              color: #93999f;
+            }
+
+            &:hover {
+              background-color: rgba(25, 143, 217, 0.07);
+              color: #198fd9;
+              border-radius: 4px;
+
+              a,
+              span {
+                color: #198fd9;
+              }
+            }
+
+            a {
+              text-decoration: none;
+              color: #2a3035;
+              display: block;
+            }
+          }
+        }
+      }
+
+      .dialog-more-options-section-remove-item {
+        margin: 0 10px;
+
+        .dialog-more-remove-item {
+          font-size: 14px;
+          line-height: 2em;
+          color: #e0284f;
+          padding: 10px 21px 10px;
+          margin-top: 12px;
+          font-weight: 500;
+          cursor: pointer;
+
+           &:hover {
+              background-color: rgba( 224, 40, 48, 0.07);
+              border-radius: 4px;
+          }
+          .dialog-more-remote-title {
+            display: inline-block;
+            margin-left: 12px;
+          }
+        }
+      }
+
+      .dialog-more-separator {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #f2f3f5;
+        padding: 4px 0;
+      }
+
+      &:before {
+        bottom: 100%;
+        left: auto;
+        right: 29px;
+        border: 5px solid transparent;
+        border-bottom-color: #ffffff;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .resize-icons {
+        .resize-icon {
+          &.has-tooltip {
+            position: relative;
+            &:before {
+              content: "";
+              border: 5px solid transparent;
+              border-bottom-color: #1d2226;
+              top:19px;
+              z-index: 2;
+              transition: all 0.2s ease 0.2s;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              opacity: 0;
+              line-height: normal;
+              pointer-events: none;
+            }
+            &:after {
+              content: attr(aria-label);
+              top:29px;
+              background: #1d2226;
+              color: #ffffff;
+              border: 1px solid #1d2226;
+              white-space: nowrap;
+              padding: 10px;
+              font-size: 11px;
+              font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 0.05em;
+              border-radius: 4px;
+              margin: 0;
+              z-index: 200;
+              transition: all 0.2s ease 0.2s;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              opacity: 0;
+              line-height: normal;
+              -webkit-font-smoothing: auto;
+              pointer-events: none;
+            }
+            &:hover {
+              &:before {
+                top: 30px;
+                opacity: 1;
+              }
+              &:after {
+                top:40px;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Active state.
+    .fusion-utility-menu-wrap {
+      position: absolute;
+      right: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      width: auto !important;
+      display: flex;
+      align-items: center;
+      z-index: 20;
+      padding: 5px;
+
+      .fusion-utility-menu {
+        cursor: pointer;
+      }
+
+      &.active {
+        overflow: visible;
+        z-index: 7;
+        .fusion-utility-menu {
+          color: #198fd9;
+        }
+
+        .fusion-builder-dialog-more-options {
+          top: 35px;
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+
+  }
+}

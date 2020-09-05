@@ -1,0 +1,63 @@
+<?php
+/**
+ * Output callbacks for options.
+ *
+ * @author     ThemeFusion
+ * @copyright  (c) Copyright by ThemeFusion
+ * @link       https://theme-fusion.com
+ * @package    Avada
+ * @subpackage Core
+ * @since 6.0
+ */
+
+// Do not allow directly accessing this file.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit( 'Direct script access denied.' );
+}
+
+/**
+ * A wrapper for static methods.
+ */
+class Avada_Output_Callbacks {
+
+	/**
+	 * Callback for the menu_sub_sep_color option.
+	 *
+	 * @static
+	 * @access public
+	 * @since 6.0
+	 * @param string $value The value.
+	 * @return string
+	 */
+	public static function menu_sub_sep_color( $value ) {
+		return fusion_is_color_transparent( $value ) ? '0' : '';
+	}
+
+	/**
+	 * Callback for the page_title_border_color option.
+	 *
+	 * @static
+	 * @access public
+	 * @since 6.0
+	 * @param string $value The value.
+	 * @return string
+	 */
+	public static function page_title_border_color( $value ) {
+		$c_page_id                  = Avada()->fusion_library->get_page_id();
+		$po_page_title_border_color = get_post_meta( $c_page_id, 'pyre_page_title_bar_borders_color', true );
+		return ( ( fusion_is_color_transparent( Avada()->settings->get( 'page_title_border_color' ) ) && empty( $po_page_title_border_color ) ) || fusion_is_color_transparent( $po_page_title_border_color ) ) ? 'none' : '';
+	}
+
+	/**
+	 * Returns unfiltered option.
+	 *
+	 * @static
+	 * @access public
+	 * @since 6.0
+	 * @param string $value The value.
+	 * @return string
+	 */
+	public static function unfiltered( $value ) {
+		return $value;
+	}
+}

@@ -1,0 +1,54 @@
+.fusion-sharing-box {
+	display: table;
+	margin-bottom: 55px;
+	height: 70px;
+	width: 100%;
+	background-color: var(--social_bg_color, #f6f6f6 );
+	box-sizing: border-box;
+	padding-left: var(--social_bg_color-0-transparent, 20px);
+	padding-right: var(--social_bg_color-0-transparent, 20px);
+
+	.avada-social-full-transparent & {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&.boxed-icons {
+		padding: 15px 20px;
+	}
+
+	.fusion-social-networks,
+	h4 {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.fusion-social-networks {
+		text-align: right;
+
+		.fusion-social-network-icon {
+			margin-bottom: 0;
+			text-decoration: none;
+		}
+
+		&.boxed-icons {
+			.fusion-social-network-icon {
+				margin: 5px;
+			}
+
+			a {
+				padding: var(--sharing_social_links_boxed_padding);
+			}
+		}
+
+		a {
+			font-size: var(--sharing_social_links_font_size);
+		}
+	}
+
+	a {
+		box-shadow: none !important;
+	}
+}
+
+//standard stylings for social links in social-links.less

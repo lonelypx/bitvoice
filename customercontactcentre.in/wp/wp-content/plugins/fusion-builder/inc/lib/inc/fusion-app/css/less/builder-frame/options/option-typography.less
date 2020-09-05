@@ -1,0 +1,95 @@
+.fusion-builder-option {
+  &.typography {
+    .select2-container {
+      width: 100% !important;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      h5 {
+        margin: 10px 0 5px;
+        color: #93999f;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+      }
+
+      >.font-backup,
+      >.font-family,
+      >.subsets,
+      >.variant,
+      >.color {
+        width: 100%;
+      }
+
+      >.letter-spacing,
+      >.line-height,
+      >.margin-bottom,
+      >.margin-top,
+      >.font-size,
+      >.variant {
+        width: 46%;
+      }
+    }
+  }
+
+  .fusion-builder-typography {
+      .fusion-colorpicker-container {
+          h5 {
+              width: 100%;
+          }
+
+          .wp-picker-holder {
+              margin-bottom: 10px;
+          }
+      }
+
+    .fusion-typography-select-wrapper {
+      position: relative;
+
+      &:hover {
+        .fusiona-arrow-down {
+          color: #2a3035;
+        }
+      }
+      .fusiona-arrow-down {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY( -50% );
+        pointer-events: none;
+        font-size: 14px;
+        line-height: 1;
+        color: #93999f;
+      }
+
+      select {
+        border: 1px solid @input-border-color;
+        box-shadow: 0 1px 1px rgba(102,113,123,.08);
+        cursor: pointer;
+        width: 100%;
+        max-width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 40px;
+        color: #2a3035;
+        border-radius: 4px;
+        min-height: 40px;
+        background: #fff;
+        position: relative;
+        transition: all 0.1s ease;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+      }
+    }
+  }
+}

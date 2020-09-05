@@ -1,0 +1,206 @@
+.fusion-builder-main-settings,
+.fusion-builder-customizer-settings {
+  .fusion-builder-option-container {
+      .fusion-builder-export-button,
+      .fusion-builder-import-button,
+      .fusion-builder-upload-button-multiple-upload {
+          display: inline-flex;
+          align-items: center;
+          padding: 0 12px;
+          height: 40px;
+          width: auto;
+          background: #fff;
+          border: 1px solid #e0e3e7;
+          border-radius: 4px;
+          box-shadow: none;
+          font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif !important;
+          font-size: 14px;
+          font-weight: bold;
+          color: #222;
+          text-decoration: none;
+          transition: color 0.1s ease;
+
+          &:hover,
+          &:focus,
+          &:active {
+              background: #fff;
+              border: 1px solid #e0e3e7;
+              box-shadow: none;
+              transform: none;
+          }
+
+          &:hover {
+              color: #198fd9;
+          }
+      }
+    .fusion-upload-area[data-mode="file"] {
+      position: relative;
+      .fusion-url-only-input {
+        display: inline-flex;
+        width: ~'calc(100% - 52px)';
+        margin-right: 8px !important;
+        padding-right: 37px;
+      }
+      .fusion-builder-upload-button {
+        background-color: #198fd9;
+        color: #ffffff;
+        width: 40px;
+        border-color: #198fd9;
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.14);
+        height: 40px;
+        display: inline-flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+      }
+      .upload-image-remove {
+        color: #93999f;
+        background: #f2f3f5;
+        padding: 7px;
+        border-radius: 4px;
+        position: absolute;
+        top: 20px;
+        transform: translateY(-50%);
+        right: 60px;
+        font-size: 10px;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          color: #2a3035;
+        }
+      }
+    }
+    .fusion-upload-area:not( [data-mode="file"] ) {
+      min-height: 160px;
+      border: 2px dashed #e0e3e7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+
+      .fusion-upload-btn {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background-color: #198fd9;
+        border-radius: 100px;
+        position: relative;
+        transition: background-color 0.1s ease;
+        font-family: 'fusion-builder-icons';
+        text-align: center;
+        font-size: 0;
+        line-height: 40px;
+        font-weight: normal;
+        color: #ffffff;
+        text-decoration: none;
+
+        &:before{
+          content:"\f067";
+          font-size: 14px;
+        }
+
+        &:hover {
+          background-color: #1081c7;
+        }
+      }
+
+      &.fusion-uploaded-image {
+        min-height: auto;
+        border: none;
+
+        .fusion-uploaded-area {
+          display: block;
+          overflow: hidden;
+          position: relative;
+          min-width: 100px;
+          min-height: 65px;
+          width: 100%;
+          text-align: center;
+
+          img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 4px;
+            background-image: linear-gradient(45deg,#c4c4c4 25%,transparent 25%,transparent 75%,#c4c4c4 75%,#c4c4c4),linear-gradient(45deg,#c4c4c4 25%,transparent 25%,transparent 75%,#c4c4c4 75%,#c4c4c4);
+            background-position: 0 0,10px 10px;
+            background-size: 20px 20px;
+          }
+
+          .fusion-uploded-image-options {
+              display: flex;
+              justify-content: end;
+            list-style: none;
+            margin: 12px -6px 0 -6px;
+            padding: 0;
+
+            li {
+                padding: 0 6px;
+
+              a {
+                  display: inline-flex;
+                  align-items: center;
+                  padding: 0 12px;
+                  height: 40px;
+                  width: auto;
+                  border-radius: 4px;
+                  box-shadow: none;
+                  font-family: "Noto Sans", Roboto, "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif !important;
+                  font-size: 14px;
+                  font-weight: bold;
+                  text-decoration: none;
+
+                  &.fusion-builder-upload-button {
+                      background: #198fd9;
+                      border: 1px solid #198fd9;
+                      color: #ffffff;
+                      transition: background-color 0.1s ease;
+
+                      &:hover {
+                        background: #1081c7;
+                      }
+                  }
+
+                  &.upload-image-remove {
+                      background: #ffffff;
+                      border: 1px solid #e0e3e7;
+                      color: #222222;
+                      transition: color 0.1s ease;
+
+                      &:hover {
+                        color: #e0284f;
+                      }
+                  }
+
+                &:before,
+                &:after {
+                    display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:not(.fusion-uploaded-image) {
+        img {
+          display: none;
+        }
+
+        .fusion-uploded-image-options {
+          padding: 0;
+          list-style: none;
+
+          li {
+            display: none;
+
+            &:last-child {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

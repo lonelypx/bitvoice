@@ -1,0 +1,128 @@
+.fusion-login-box {
+  .fusion-login-caption {
+    margin-bottom: 20px;
+  }
+
+  .fusion-login-form {
+    padding: 25px;
+    background-color: #f6f6f6;
+
+    input[type="password"],
+    input[type="text"] {
+      height: 29px;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 13px;
+      padding: 8px 15px;
+      margin: 0;
+      width: 100%;
+      box-sizing: border-box;
+      vertical-align: middle;
+      -webkit-appearance: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .fusion-login-button {
+    float: none;
+    width: 100%;
+  }
+
+  .fusion-login-button-no-fullwidth {
+    width: auto;
+  }
+
+  .fusion-login-input-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .fusion-login-links {
+    margin: 0 -10px;
+
+    > a,
+    .fusion-login-remember-me {
+      padding: 0 10px;
+    }
+
+    .fusion-login-remember-me {
+      display: inline-block;
+    }
+  }
+
+  .fusion-login-loggedin-links {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    text-align: initial;
+  }
+
+  .fusion-login-avatar {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+  }
+
+  .fusion-login-box-error {
+    margin-bottom: 20px;
+    color: #d04544;
+  }
+
+  &.fusion-login-box-login {
+    .fusion-login-submit-wrapper {
+      margin-bottom: 20px;
+    }
+  }
+
+  &.fusion-login-align-center {
+    text-align: center;
+  }
+
+  &.fusion-login-field-layout-floated {
+    .fusion-login-fields {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -10px;
+
+      .fusion-login-input-wrapper {
+        flex-grow: 1;
+        padding: 0 10px;
+      }
+    }
+
+    &.fusion-login-align-textflow {
+      &.fusion-login-box-login,
+      &.fusion-login-box-register {
+        .fusion-login-additional-content {
+          display: flex;
+          align-items: center;
+        }
+
+        .fusion-login-registration-confirm {
+          order: 1;
+          margin: 0 15px;
+        }
+
+        .fusion-login-submit-wrapper {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .fusion-login-links {
+      margin: 0 5px;
+    }
+  }
+}
+
+.fusion-hidden-content {
+  overflow: hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+}

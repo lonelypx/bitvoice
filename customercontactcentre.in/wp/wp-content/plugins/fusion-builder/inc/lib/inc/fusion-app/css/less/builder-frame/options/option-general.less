@@ -1,0 +1,204 @@
+.fusion-builder-customizer-settings {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+
+  input {
+    &.error {
+      color: #c00;
+    }
+  }
+
+  input[type=email],
+  input[type=password],
+  input[type=text],
+  input[type=text],
+  textarea {
+    background: @input-background-color;
+    border: 1px solid @input-border-color;
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  >li {
+    padding: 20px;
+    list-style: none;
+    list-style-type: none;
+  }
+
+  .option-details {
+    position: relative;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    .option-preview-toggle {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background: #f1f1f1;
+      padding: 7px;
+      border-radius: 100%;
+      font-size: 12px;
+      color: #333;
+
+      &:hover,
+      &.active {
+        background: #3cb9f0;
+        color: #fff;
+      }
+    }
+
+    .description {
+      font-size: 12px;
+      color: @light-text-color;
+      padding: 0;
+      font-weight: 300;
+
+      a {
+        color: @text-color;
+        text-decoration: underline;
+
+        &:hover {
+          color: @blue;
+        }
+      }
+    }
+  }
+}
+
+.fusion-builder-option {
+  &.tinymce {
+    .switch-html {
+      float: right;
+    }
+    .switch-tmce {
+      float: left;
+    }
+  }
+  .wp-editor-wrap {
+    .wp-editor-tools {
+      .wp-media-buttons {
+        .add_media {
+          background: #ffffff;
+          border: 1px solid #f2f3f5;
+          box-shadow: none;
+          padding: 6px;
+          height: auto;
+          line-height: normal;
+          font-weight: 600;
+          box-shadow: 0 1px 1px rgba(102, 113, 123, 0.08);
+
+          .wp-media-buttons-icon {
+            color: #198fd9;
+            margin: 0 3px;
+
+            &:before {
+              content: "\f03e";
+              font-family: "Font Awesome 5 Free";
+            }
+          }
+        }
+      }
+      .wp-editor-tabs {
+        .wp-switch-editor {
+          background: #ffffff;
+          padding: 6px 15px;
+          border-radius: 4px 4px 0 0;
+          border-bottom: 0;
+        }
+      }
+    }
+    &.html-active {
+      .wp-editor-tabs {
+        .switch-html {
+          background:#f2f3f5;
+        }
+      }
+    }
+   &.tmce-active {
+      .wp-editor-tabs {
+       .switch-tmce {
+          background:#f2f3f5;
+        }
+      }
+    }
+    .wp-editor-container {
+      border: 1px solid #f5f5f5;
+      .mce-container-body {
+        .mce-container {
+          &:before {
+            box-shadow: none;
+          }
+          .mce-container-body {
+            .mce-container {
+              border-bottom: none;
+              background: #f2f3f5;
+              .mce-widget {
+                &.mce-listbox {
+                  background: transparent;
+                  border: none;
+                  button {
+                    color: #2a3035;
+                    border: 1px solid #e0e3e7;
+                    border-radius: 4px !important;
+                    box-shadow: 0 1px 1px rgba(102, 113, 123, 0.08);
+                    background: #fff;
+                    position: relative;
+                    padding: 4px 8px;
+                  }
+                }
+
+                &:not(.mce-listbox) {
+                  border-radius: 4px;
+                  width: 28px;
+                  height: 28px;
+                  border:none;
+
+                  button {
+                    width: 100%;
+                    height: 100%;
+                  }
+                  &:hover {
+                    background: #ffffff;
+                    box-shadow:none;
+                  }
+                }
+
+                &.mce-splitbtn {
+                    width: 43px;
+
+                    button {
+                        width: 28px;
+                    }
+
+                    .mce-open {
+                        width: 15px;
+                        padding: 0;
+
+                        .mce-caret {
+                            margin: 2px 1px 0 1px;
+                        }
+                    }
+
+                    &:hover {
+                        .mce-open {
+                            border-left-color: #f2f3f5;
+                        }
+                    }
+                }
+
+                &.mce-active {
+                  background: #198fd9 !important;
+                  color: #ffffff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

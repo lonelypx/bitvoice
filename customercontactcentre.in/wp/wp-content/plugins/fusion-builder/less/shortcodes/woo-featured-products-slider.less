@@ -1,0 +1,165 @@
+.fusion-woo-featured-products-slider {
+  position: relative;
+  margin-bottom: 25px;
+
+  .fusion-carousel-wrapper {
+    overflow: hidden;
+  }
+
+  .fusion-rollover-content {
+    .price {
+      margin-top: 3px;
+
+      .amount {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .fusion-carousel-nav {
+    .fusion-nav-next,
+    .fusion-nav-prev {
+      margin-top: -31px;
+      height: 63px;
+      width: 63px;
+
+      &:before {
+        content: @left-arrow-large;
+        line-height: 63px;
+        font-size: 25px;
+      }
+    }
+
+    .fusion-nav-next {
+      &:before {
+        content: @right-arrow-large;
+      }
+    }
+  }
+}
+/* Used for both woo carousels */
+.fusion-woo-slider {
+  .fusion-rollover-content {
+    .fusion-rollover-title {
+      margin: 0;
+      line-height: normal;
+    }
+  }
+
+  .fusion-product-buttons {
+    position: relative;
+    z-index: 9;
+  }
+
+  .fusion-carousel-title-below-image {
+    .fusion-product-buttons {
+      position: relative;
+      z-index: 9;
+
+      a {
+        &:first-child,
+        &:last-child {
+          display: inline-block;
+          float: none;
+          margin: 0;
+        }
+      }
+    }
+
+    .fusion-rollover-linebreak {
+      display: block;
+      margin-bottom: 8px;
+      vertical-align: middle;
+    }
+  }
+
+  .fusion-classic-product-image-wrapper {
+    .cart-loading > a {
+      color: #fff !important;
+    }
+  }
+
+  .cart-loading .view-cart {
+    display: none;
+  }
+}
+
+.fusion-woo-product-design-classic {
+  .fusion-woo-slider {
+    .fusion-image-wrapper .fusion-rollover .fusion-rollover-content {
+      .fusion-product-buttons {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        padding: 0 10%;
+        height: 40px;
+        width: 100%;
+      }
+    }
+
+    .fusion-carousel-title-below-image {
+      .fusion-image-wrapper .fusion-rollover .fusion-rollover-content {
+        .fusion-product-buttons {
+          position: relative;
+          bottom: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+/*
+* Clean Design
+*/
+.fusion-woo-product-design-clean {
+  .fusion-woo-slider {
+    .fusion-image-wrapper .fusion-rollover .fusion-rollover-content {
+      .fusion-product-buttons {
+        margin-top: 6px;
+        text-transform: uppercase;
+
+        a {
+          display: inline;
+          float: none;
+          padding: 0;
+          letter-spacing: 1px;
+
+          &:hover {
+            opacity: 0.6;
+          }
+
+          &:after,
+          &:before {
+            display: none;
+          }
+        }
+
+        .wc-forward {
+          display: none;
+        }
+
+        .fusion-rollover-linebreak {
+          display: inline-block;
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .fusion-carousel-title-below-image {
+      .fusion-carousel-title {
+        text-align: center;
+      }
+
+      .fusion-carousel-meta {
+        text-align: center;
+      }
+    }
+
+    .fusion-carousel-title-on-rollover {
+      .fusion-rollover-linebreak {
+        display: none;
+      }
+    }
+  }
+}

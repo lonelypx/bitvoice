@@ -1,0 +1,1196 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*======================== Google Fonts ======================*/
+@import url(https://fonts.googleapis.com/css?family=Andika);
+@import url(https://fonts.googleapis.com/css?family=Artifika);
+@import url(https://fonts.googleapis.com/css?family=Antic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i);
+
+/* ======================= /Google Fonts =================== */
+
+body{ 
+	margin:0px;
+	font-size:14px; 
+	background:#fff;  
+	font-family: 'Ubuntu', sans-serif;
+}
+iframe,player,player1,embed { position:relative; z-index:0}
+a{text-decoration:none;}
+a:hover{text-decoration:none;}
+
+
+/*------------------------------ start social network --------------------------*/
+.social-icons{
+	padding-top:13px;
+	/*position:absolute;
+	z-index:9999;
+	left: 9.5%;
+    top: 13px;*/
+}
+.social-icons p{
+	color:#fff;
+	font-family: 'Andika', sans-serif;
+	}
+.social-icons ul{
+	list-style-type:none;
+	float:right;
+	}
+.social-icons ul li{
+	display:inline-block;
+	padding-right:25px;
+	}
+.social-icons ul li i{ font-size:16px;}
+.social-icons ul li a{color:#fff;}
+.social-icons ul li a:hover{color:#6bbaf2;}
+
+/*------------------------------ End social network --------------------------*/
+
+
+/*------------------------------ start Nav --------------------------*/
+.navbar-default{
+	background:#3b3b3b;
+	border:none;
+	}
+.navbar-default .navbar-nav > li{
+	text-transform:uppercase;
+	font-family: 'Andika', sans-serif;
+	font-size:14px;
+	padding-left: 18px;
+	}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
+	color: #3b3b3b;
+	 /*border-bottom:3px solid #fff;*/
+   background-color: #e7e7e7;
+	}
+.navbar-default .navbar-nav > li > a{
+	color:#fff;
+	}
+.navbar-default .navbar-nav > .active > a{
+	background:none;
+	color:#fff;
+	border-bottom:3px solid  #fff;
+	}
+	
+/*.header-height{ height:51px;}*/
+
+.dropdown-menu{
+	background-color: #3b3b3b;
+	text-transform:none;
+	}
+.dropdown-menu > li > a{
+	color:#fff;
+	padding:12px 20px;
+	}
+.navbar-right .dropdown-menu{
+	left:0;
+	right:auto;
+	right:auto;
+	}
+
+/*------------------------------ End Nav --------------------------*/
+
+
+/*------------------------------ start Logo Section --------------------------*/
+.logo-section-bg{
+	background:#2e86c4;
+	margin-top:51px;
+	position:relative;
+}
+.logo-section-bg::before {
+    border-right: 60px solid transparent;
+	border-left: 0px solid #fff;
+	border-top: 118px solid #fff;
+	content: "";
+	height: 0;
+	position: absolute;
+	left: -60px;
+	top: 0;
+	width: 40%;
+	display: ;
+}
+.logo{
+	/*padding:36px 0px;*/
+	padding-top:36px;
+}
+.quickInfo{
+	text-align:right;
+}
+.quickInfo ul{
+	margin:0;
+	padding:22px 0;
+	overflow:hidden;
+	float:right;
+}
+.quickInfo li{
+	float:left;
+	position:relative;
+	border-right:1px solid #6bbaf2;
+	padding:10px 25px 10px 55px;
+	color:#fff;
+	font-family: 'Artifika', serif;
+	list-style:none;
+}
+.quickInfo li p{
+	text-align:left;
+	font-size:14px;
+	line-height:22px;
+	padding:0;
+	color:#fff;
+	text-transform:uppercase;
+}
+.quickInfo li .icons{
+	position:absolute;
+	top: 5px;
+	left: 18px;
+	font-size: 30px;
+}
+.quickInfo li p span{
+	text-transform:none;
+	color:#fff;
+	display:block;
+	font-size:17px;
+}
+.quickInfo li:last-child{
+	margin-right:0;
+	border-right:0 none;
+	padding-left: 60px;
+	padding-right: 0;
+}
+.quickInfo li a{
+	color:#fff;
+}
+.quickInfo li a:hover{
+	color:#6bbaf2;
+}
+/*------------------------------ End Logo Section --------------------------*/
+
+/*------------------------------ Start Banner Section --------------------------*/
+
+.benefit-bg{
+	background: url(../images/benefit-bg.jpg) no-repeat;
+	background-size:cover;
+	}
+	
+.benefits{
+	 padding-top:200px;
+	 padding-bottom:45px;
+	 }
+	
+
+
+
+.info-card {
+    float: left;
+	-webkit-perspective: 600px;
+}
+
+.front  {
+	transition: -webkit-transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+}
+
+.front h3{
+	text-align:center;
+	font-family: 'Artifika', serif;
+	font-size:18px;
+	color:#fff;
+	text-transform:uppercase;
+	border-top:solid 3px #2e86c4;
+	padding-top:25px;
+	}
+
+.back{
+	background: #FFF;
+	transition: -webkit-transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	}
+.back img{
+	 margin:0 auto;
+	 padding-bottom:10px;
+	 }
+.back p{
+	text-align:center;
+	color:#74716f;
+	font-size:14px;
+	}
+
+.front {
+	overflow: hidden;
+	width: 100%;
+	height: 252px;
+	position: absolute;
+	z-index: 1;
+	padding: 45px 10px;
+}
+
+.front img{
+	margin:0 auto;}
+
+.back {
+	padding: 45px 10px;
+	width: 100%;
+	height: 252px;
+	-webkit-transform: rotateY(-180deg);
+}
+
+.info-card:hover .back {
+	-webkit-transform: rotateY(0);
+}
+
+.info-card:hover .front {
+	-webkit-transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+/*------------------------------ End Banner Section --------------------------*/
+/*------------------------------- start aboutWrap ----------------------------*/
+.aboutWrap{
+	background:url(../images/about-image.jpg) no-repeat;
+	background-size:cover;
+	padding:40px 0;
+}
+.aboutWrap h2{
+	font-family: 'Ubuntu', sans-serif;
+	font-size:18px;
+	color:#464646;
+	text-transform:uppercase;
+	position:relative;
+	margin-top: 0;
+	padding-left: 55px;
+	margin-bottom: 35px;
+}
+.aboutWrap h2 .headingImg{
+	position:absolute;
+	top:-7px;
+	left:0;
+}
+.aboutWrap p{
+	color:#464646;
+	font-size:14px;
+	line-height:22px;
+	margin:0;
+	padding-bottom:20px;
+}
+a.report{
+	font-size:14px;
+	font-family: 'Artifika', serif;
+	font-weight:bold;
+}
+a.report:hover{
+	color:#333;
+}
+.play-icon{padding-right:10px !important;}
+
+/*------------------------------- end aboutWrap -------------------------------*/
+
+
+/*------------------------------ Start Our Services --------------------------*/
+
+.service-bg{
+	background:#2e86c4;
+	padding:35px 0px;
+	}
+.heading{}
+.heading h2{
+	font-size:30px;
+	color:#fff;
+	text-align:center;
+	font-family: 'Artifika', serif;
+	margin-bottom:15px;
+	}
+.heading img{
+	margin:0 auto;
+	margin-bottom:2%;
+	}
+.our-services{}
+.our-services p{
+	text-align:center;
+	color:#fff;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:15px;
+	padding: 10px 7%;
+    line-height: 24px;
+	margin-bottom:40px;
+	}
+	
+.service-1{}
+.service-1 img{
+	margin:0 auto;
+	}
+.service-1 h4{
+	text-align:center;
+	color:#fff;
+	text-transform:uppercase;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:16px;
+	padding-top:14px;
+	min-height:50px
+	}
+.service-1 p{
+	font-size:14px;
+	color:#fff;
+	line-height:22px;
+	text-align:center;
+	font-family: 'Ubuntu', sans-serif;
+	padding:10px 15px;
+	min-height:130px;
+	padding-bottom:0px;
+	margin-bottom:15px;
+	}
+.service-1 h5{
+	font-size:15px;
+	font-family: 'Artifika', serif;
+	text-align:center;
+	}
+.service-1 h5 a{
+	color:#fff;
+	border-bottom:1px solid #fff;
+	padding:3px 7px;
+	}
+.service-1 h5 a:hover{
+	border:none;
+	color:#000;
+	}
+/*------------------------------ End Our Services --------------------------*/
+
+
+/*------------------------------ Start Benefit-with-section --------------------------*/
+
+.benefit-with{
+	padding:40px 0px 30px 0px;
+	}
+.side-heading img{
+	float:left;
+	padding-right:15px;
+	}
+
+.side-heading{ /*padding-left:15px;*/}
+.side-heading h3{
+	color:#464646;
+	font-size:18px;
+	text-transform:uppercase;
+	font-family: 'Ubuntu', sans-serif;
+	margin-top: 10px;
+    margin-bottom: 40px;
+	}
+.side-heading h3 span{
+	font-size:13px;
+	color:#555555;
+	font-family: 'Ubuntu-Light-Italic';
+	text-transform:none;
+	}
+	
+.benefit-with-text{}
+
+.benefit-with-text{}
+.benefit-with-text p{
+	color:#464646;
+	font-size:14px;
+	text-align:left;
+	font-family: 'Ubuntu', sans-serif;
+	line-height:22px;
+	padding-bottom:10px;
+	padding-right: 50px;
+	}
+.benefit-with-text h4{
+	font-size: 14px;
+    font-family: 'Artifika', serif;
+    font-weight: bold;
+	padding-bottom:10px;
+	}
+.benefit-with-text img{ float:left;}
+.benefit-with-text h4 a{color: #131414;}
+
+.benefit-with-one{ padding-bottom:20px; padding-top:5px;}
+.benefit-with-one h5{
+	font-size:15px;
+	text-transform:uppercase;
+	color:#464646;
+	font-family: 'Ubuntu', sans-serif;
+	}
+.benefit-with-one p{
+	color:#464646;
+	font-size:14px;
+	font-family: 'Ubuntu', sans-serif;
+	padding-bottom: 10px;
+	padding-right:5px;
+	line-height:22px;
+	}
+.benefit-with-one img{
+	padding:0px 0px 5px 0px;
+	}
+.hr-line{
+	border:solid 1px #c3d2de;
+	width:60px;
+	}
+
+/*------------------------------ End Benefit-with-section --------------------------*/
+
+
+/*------------------------------Start cutomer-words -----------------------*/
+.padding-zero{ padding:0;}
+
+.customers-word-bg{
+	 background:url('../images/customer-words-bg.jpg');
+	 padding-top:20px;
+	 padding-bottom:40px;
+	 }
+.cutomer-words{}
+.cutomer-words p{
+	background:#e2e2e9;
+	border:#fff solid 2px;
+	color:#3b3b3b;
+	font-size:13px;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 25px 29px;
+	min-height:136px;
+	}
+#triangle-bottom-acomi {
+    width: 0;
+    height: 0;
+    border-right: 40px solid #fff;
+    border-bottom: 30px solid transparent;
+    position: relative;
+    z-index: 9;
+    right: 23%;
+    bottom: 4%;
+	margin-top:-12px;
+}
+.carousel-control.right{ background:none;}
+.carousel-control.left{ background:none;}
+
+.cutomer-image{
+	text-align:center;
+	margin-top:25px;
+	margin-right:-20px;
+	}
+.cutomer-image h5{
+	font-family: 'Amaranth-Italic';
+	color:#fff;
+	}
+
+.customers-word-bg .carousel-control{
+	width:0%;
+	bottom:62%;
+	}
+.customers-word-bg .carousel-control.left{ left:-2%;}
+.customers-word-bg .carousel-control.right{ right:-2%;}
+/*------------------------------End cutomer-words -----------------------*/
+
+
+
+/*------------------------------Start Our Clients section -----------------------*/
+
+.our-clients-bg{
+	background:#f2f2f2;
+	padding:30px 0px;
+	}
+.our-clients h3{padding-top:10px;}
+.our-clients p{
+	color:#464646;
+	font-size:14px;
+	font-family: 'Ubuntu', sans-serif;
+	line-height:22px;
+	}
+	
+	
+/*------------------------------End Our Clients section -----------------------*/
+
+
+/*------------------------------Start Footer section -----------------------*/
+
+footer{
+	 background: url(../images/footer-bg.jpg) no-repeat;
+	 padding:35px 0px 16px 0px;
+	 background-size:cover;
+	 }
+
+.foo-about{}
+.foo-about img{
+	padding:20px 0px;
+	}
+.foo-about p{
+	font-family: 'Ubuntu', sans-serif;
+	font-size:13px;
+	color:#fff;
+	line-height:20px;
+	}
+.quick-links{
+	border-left: solid 1px #cac8c8;
+	padding: 0px 23px;
+	}
+.quick-links h4{
+	font-family: 'Ubuntu', sans-serif;
+	font-size:18px;
+	text-transform:uppercase;
+	color:#fff;
+	padding-bottom:20px;
+	padding-left:15px;
+	}
+.foo-links{
+	list-style-image:url('../images/ul-li-icon.png');
+	padding-left:0px;
+	font-family: 'Ubuntu', sans-serif;
+	}
+.foo-links li{
+	margin-bottom:6px;
+	font-size:14px;
+	}
+.foo-links li a{ color:#fff;}
+
+.foo-social{
+	list-style-type:none;
+	padding-left:0px;
+	margin-top:35px;
+	padding-bottom:35px;
+	}
+.foo-social li{
+	display:inline-block;
+	margin-right:10px;
+	}
+.foo-social li a{ color:#3d3d3d;}
+.foo-social li a:hover{ color:#2e86c4;}
+
+.foo-social li a i{
+	display: inline-block;
+    border-radius: 60px;
+	padding-left: 1px;
+    padding-top: 11px;
+	width: 40px;
+    height: 40px;
+    text-align: center;
+    background: #fff;
+    font-size: 16px;
+  }
+.foo-social li a i:hover{ background:#2e86c4; color:#fff;}
+
+.quick-contact{border-left: solid 1px #cac8c8;}
+.quick-contact h4{
+	font-family: 'Ubuntu', sans-serif;
+	font-size:18px;
+	text-transform:uppercase;
+	color:#fff;
+	padding-bottom:20px;
+	padding-left:35px;
+	}
+.quick-contact ul{
+	list-style-type:none;
+	padding-bottom: 40px;
+	}
+.quick-contact ul li{
+	color:#fff;
+	font-family: 'Ubuntu', sans-serif;
+	margin-bottom:15px;
+	}
+.quick-contact ul li a{ color:#fff;}
+.quick-contact ul li i{
+	padding-right:12px;
+	font-size:16px;
+	float:left;
+	}
+.location i{ padding-bottom:30px; float:left;}
+
+
+
+.copyright-bg{ background:#212121;}
+.copyright p{
+	 font-family: 'Ubuntu', sans-serif;
+	color:#fff;
+	font-size:15px;
+	text-align:center;
+	padding:15px;
+	margin-bottom:0px;
+	}
+
+/*----------------------------End Footer Section -----------------------*/
+
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Product one page style start
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.innerbanner{}
+.innerbanner img{
+	width:100%;
+}
+.container-fluid{ padding:0px;}
+
+.product-page{
+	margin-bottom:20px;
+}
+.product-page h1{
+	text-transform:uppercase;
+	font-size:33px;
+	font-family: 'Ubuntu', sans-serif;
+	color:#2e86c5;
+	text-align:center;
+	padding: 15px 5px 20px 5px;
+    }
+	
+.product-page p{
+	color:#3b3b3b;
+	font-size:14px;
+	line-height:22px;
+	font-family: 'Ubuntu', sans-serif;
+	padding-bottom:10px;
+	}
+.product-page h3{
+	font-size:24px;
+	color:#3b3b3b;
+	font-family: 'Ubuntu', sans-serif;
+	margin-bottom:0px;
+	padding-bottom:1px;
+	}
+.underline{
+	height:1px;
+	width:70px;
+	border:solid 1px #2e86c5;
+	margin-bottom:15px;
+	}
+.product-page h4{
+	font-size:20px !important;
+	color:#3b3b3b !important;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 8px 0px 9px 0px;
+	}
+.product-page ul{
+	padding:0;
+	margin:0;
+	}
+.product-page ul li{
+	margin-bottom:10px;
+	padding-left:25px;
+	font-size:14px;
+	line-height:20px;
+	list-style:none;
+	background:url(../images/inner-page-ul-li.png) no-repeat 0 4px;
+}
+.product-page ul li a{color:#3b3b3b;}
+.product-page ul li a:hover{color:#2e86c5;}
+.product-page img{ width:100%;}
+
+.product-page a{
+	display:block;
+}
+.product-page a span{
+	margin-right:8px;
+}
+
+.product-page img{
+	border:2px solid #e7e7e7;
+}
+.tab-section{}
+.tab-section h4{
+	font-size:24px;
+	color:#3b3b3b;
+	font-family: 'Ubuntu', sans-serif;
+	margin-top:0px;
+	padding-bottom: 10px;
+	}
+	
+.nav-tabs > li > a{
+	text-transform:uppercase;
+	border:none;
+	font-size:18px;
+	font-family: 'Ubuntu', sans-serif;
+	border-radius: 4px;
+	color:#3b3b3b;
+	background:#e6e6e6;
+	}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{
+	background:#2e86c5;
+	color:#fff;
+	border:none;
+	}
+.nav-tabs{ border:none;}
+.tab-content{}
+.tab-content ul{
+	list-style-image:url('../images/gray-ul-li-icon.png');
+	padding-left:15px;
+	padding-top:15px;
+	padding-bottom:15px;
+	}
+.tab-content ul li{
+	margin-bottom:8px;
+	color:#3d3d3d;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:16px;
+	}
+.tab-content ul li a{ color:#3d3d3d;}
+.tab-content ul li a:hover{ color:#2e86c5;}
+
+
+
+
+.optional-features{
+	padding:15px 0px 15px 0px;
+	margin-bottom:25px;
+	}
+.optional-features h4{
+	font-size:24px;
+	text-align:center;
+	color:#3d3d3d;
+	font-family: 'Ubuntu', sans-serif;
+	}
+	
+.op-feature-one{
+	margin-bottom:25px;
+	padding-top:15px;
+	}
+
+
+
+/*fliper*/
+
+.info-card2 {
+    float: left;
+	-webkit-perspective: 600px;
+}
+
+
+.front2  {
+	transition: -webkit-transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	background:#efefef;
+	padding:25px;
+}
+
+.front2 h5{
+	font-size:20px;
+	color:#2e86c5;
+	font-family: 'Ubuntu', sans-serif;
+	padding-left:15px;
+	}
+
+.back2{
+	background: #FFF;
+	transition: -webkit-transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	}
+.back2 h5{
+	font-size:20px;
+	font-family: 'Ubuntu', sans-serif;
+	}
+.back2 img{
+	 margin:0 auto;
+	 padding-bottom:10px;
+	 }
+.back2 p{
+	font-size:14px;
+	color:#3d3d3d;
+	font-family: 'Ubuntu', sans-serif;
+	}
+
+.front2 {
+	overflow: hidden;
+	width: 100%;
+	height: 130px;
+	position: absolute;
+	z-index: 1;
+	padding: 25px 10px;
+}
+
+.front2 img{
+	background:#2e86c5;
+	border-radius:40px;
+	padding:15px;
+	float:left;
+	margin-right:15px;}
+
+.back2 {
+	padding: 25px 10px;
+	width: 100%;
+	height: 130px;
+	-webkit-transform: rotateY(-180deg);
+}
+.back2 h5 a{color:#3d3d3d;}
+.back2 h5 a:hover{color:#2e86c5;}
+
+.info-card2:hover .back2 {
+	-webkit-transform: rotateY(0);
+}
+
+.info-card2:hover .front2 {
+	-webkit-transform: rotateY(180deg);
+}
+/*fliper*/
+
+.Standardized-Functions{}
+
+.Standardized-Functions h4{
+	font-size:24px;
+	text-align:left;
+	color:#3d3d3d;
+	font-family: 'Ubuntu', sans-serif;
+	}
+
+.Standardized-Functions ul{
+	list-style-image:url('../images/gray-ul-li-icon.png');
+	padding-left:15px;
+	padding-top:15px;
+	padding-bottom:15px;
+	}
+.Standardized-Functions ul li{
+	margin-bottom:8px;
+	color:#3d3d3d;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:16px;
+	}
+.Standardized-Functions ul li a{ color:#3d3d3d;}
+.Standardized-Functions ul li a:hover{ color:#2e86c5;}
+
+
+
+/*******************************
+* Does not work properly if "in" is added after "collapse".
+* Get free snippets on bootpen.com
+*******************************/
+    .panel-group .panel {
+        border-radius: 0;
+        box-shadow: none;
+        border-color: #EEEEEE;
+    }
+
+    .panel-default > .panel-heading {
+        padding: 0;
+        border-radius: 0;
+        color: #212121;
+        background-color: #FAFAFA;
+        border-color: #EEEEEE;
+    }
+
+    .panel-title {
+        font-size: 14px;
+    }
+
+    .panel-title > a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+    }
+
+    .more-less {
+        float: right;
+        color: #212121;
+    }
+
+    .panel-default > .panel-heading + .panel-collapse > .panel-body {
+        border-top-color: #EEEEEE;
+    }
+
+/* ----- v CAN BE DELETED v ----- */
+
+/*-------------------------------- start top ---------------------------------*/
+a.go-top {
+	position: fixed;
+	bottom: 20px;
+    right: 40px;
+	text-decoration: none;
+	color: white;
+	background-color:#035fa8;
+	border:1px solid #fff;
+    width: 50px;
+	height:50px;
+	display: none;
+	font-size:40px !important;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	text-align:center;
+	padding:0;
+	z-index:5;
+	color:#fff;
+	-webkit-border-radius: 50px 50px 50px 50px;
+	border-radius: 50px 50px 50px 50px;
+}
+a.go-top:hover {
+	background-color:#3f3d3d;
+	color:#fff;
+}
+/*-------------------------------- end top ---------------------------------*/
+/*=============================== Inner Page Style ==============================*/
+.innerWrap{
+	padding:40px 0;
+}
+.innerWrap h2{
+	text-transform:uppercase;
+	font-size:20px;
+	font-family: 'Ubuntu', sans-serif;
+	color:#2e86c5;
+	padding: 0 0 15px;
+	margin:0;
+	overflow: hidden;
+	line-height: 35px;
+}
+.innerWrap h2::before{
+	content: '';
+	background:url(../images/heading-icon.png) no-repeat;
+	width:47px;
+	height:40px;
+	float:left;
+	margin-right:15px;
+}
+	
+.innerWrap p{
+	color:#3b3b3b;
+	font-size:14px;
+	line-height:22px;
+	font-family: 'Ubuntu', sans-serif;
+	padding-bottom:10px;
+}
+.innerWrap h3{
+	font-size:24px;
+	color:#3b3b3b;
+	font-family: 'Ubuntu', sans-serif;
+	margin-bottom:0px;
+	padding-bottom:1px;
+}
+.innerWrap h4{
+	font-size:20px;
+	color:#3b3b3b;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 8px 0px 9px 0px;
+}
+/*=============================== end Inner Page Style ==============================*/
+/*=============================== start About page CSS ===============================*/
+.overViewTab{
+	padding:40px 0;
+	background:#f8f8f8;
+}
+.overViewTab p{
+	padding-right:25px;
+}
+.overViewTab ul {
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	border-bottom: 5px solid #eaeaea;
+}
+.overViewTab ul li {
+	width:25%;
+	cursor: pointer;
+	font-weight: 400;
+	padding:0px;
+	font-size: 15px;
+	position: relative;
+	color: #999;
+	margin: 0;
+	text-align:center;
+}
+.overViewTab ul li a{
+	color: #0a5289;
+	font-size:15px;
+	padding-bottom: 25px;
+	text-transform:none;
+}
+.overViewTab ul li.active {
+	border:0;
+	background:none;
+	color: #014776;
+}
+.overViewTab ul li.active:before {
+	content: "";
+	border-bottom: 4px solid;
+	border-color: #21c2f8;
+	width: 100%;
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+}
+.overViewTab ul li a:after {
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid;
+	border-bottom-color: #21c2f8;
+	content: "";
+	display: block;
+	height: 0;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	left: 0;
+	margin: auto;
+	width: 0;
+	-webkit-transition: all 300ms linear 0s;
+	-moz-transition: all 300ms linear 0s;
+	-o-transition: all 300ms linear 0s;
+	-ms-transition: all 300ms linear 0s;
+	transition: all 300ms linear 0s;
+	opacity: 0;
+}
+.overViewTab ul li.active a::before, 
+.overViewTab ul li.active a::after {
+    opacity: 1;
+}
+.overViewTab .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{
+	border:0;
+	color:#21c2f8;
+	background:none;
+}
+.overViewTab .nav-tabs > li > a:hover{
+	background:none;
+}
+.overViewTab .nav-tabs > li > a{
+	border-radius:0;
+	margin-right:0;
+	border:0;
+	background:none;
+}
+.overViewTab .tab-content{
+	padding:25px 0px;
+	box-sizing: border-box;
+}
+.overViewTab .tab-content img{
+	border:5px solid #eaeaea;
+}
+.overViewTab .tab-content h3{
+	padding:0 0 20px 0;
+	margin:0;
+	font-weight:400;
+	font-size:20px;
+}
+.overViewTab .tab-content ul{
+	border:0;
+	padding-top:0;
+}
+.overViewTab .tab-content li{
+	width:100%;
+	text-align:left;
+	padding-bottom:10px;
+	padding-left:8px;
+	font-size:14px;
+	line-height:22px;
+	color:#464646;
+}
+.catBox{
+	text-align:center;
+	background:#f3f3f3;
+	padding:25px;
+	border-bottom:5px solid #cccaca;
+	margin:25px 0;
+}
+.catBox img{
+	border:5px solid #b2b1b1;
+	margin:0 auto 15px;
+}
+.catBox h4{
+	font-size:15px;
+	text-transform:uppercase;
+	margin:0;
+	padding-bottom:15px;
+}
+.benefitImg{
+	width:70px;
+	height:70px;
+	border-radius:100px;
+	border:2px solid #cccaca;
+	background:#fff;
+	color:#464646;
+	font-size:30px;
+	margin:0 auto 15px;
+	text-align:center;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.benefitImg:hover{
+	background:#cccaca;
+	border-color:#fff;
+	color:#fff;
+}
+/*=============================== end About page CSS ===================================*/
+
+/*=============================== start contact page css ==============================*/
+.contactWrap{
+	margin:25px 0;
+}
+.contactForm{
+	background:#f2f2f2;
+	border:1px solid #e1d8cd;
+	padding:25px;
+}
+.contactForm label{
+	font-weight:400;
+	font-size:14px;
+}
+.contactForm .form-group{
+	margin-bottom:30px;
+	position:relative;
+}
+.input-group-addon {
+    position: absolute;
+    border: 0;
+    background: no-repeat;
+    top: 25px;
+    right: 15px;
+	font-size:18px;
+	color:#16722f;
+}
+.contactForm .form-control{
+	font-size:13px;
+	font-style:italic;
+}
+.contactForm textarea.form-control{
+	min-height:100px;
+}
+.contactForm .sendQueryBtn{
+	background:#2e86c4;
+	color:#fff;
+	border:0;
+	padding:8px 20px;
+	text-transform:uppercase;
+}
+.contactForm .sendQueryBtn:hover{
+	background:#333;
+}
+.contactPageInfo{
+	background:#2e86c4;
+	padding:28px 35px;
+}
+.contactPageInfo h3{
+	color:#fff;
+	font-family: 'Artifika', serif;
+	font-size:18px;
+	padding-bottom:10px;
+	margin:0
+}
+.contactPageInfo hr{
+	border-color:#fff;
+	width:15%;
+	margin:0 0 15px;
+}
+.contactPageInfo p{
+	margin:15px 0 25px;
+	color:#fff;
+	font-size:14px;
+	line-height:22px;
+	text-align:left;
+}
+.contactPageInfo p a{
+	color:#fff;
+}
+.contactPageInfo p a:hover{
+	color:#94ebfe;
+}
+.contactPageInfo p:last-child{
+	margin-bottom:0;
+}
+.contactMap{
+	background:#fff;
+	padding:5px;
+}
+
+/*=============================== end contact page css ================================*/
+
